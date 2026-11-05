@@ -1,7 +1,7 @@
 import express from 'express';
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { db } from './db.js';
 import { seedContent } from './seed.js';
 import { getUser, addXp, loseHeart, gainHeart, lastNDays, EXAM_PASS, EXAM_SIZE } from './game.js';
@@ -280,4 +280,15 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Error interno del servidor' });
 });
 
-app.listen(PORT, () => console.log(`🚀 API de CodeRuta en http://localhost:${PORT}`));
+/** Arranca el servidor en 127.0.0.1. Resuelve con el puerto real o rechaza si está ocupado. */
+export function startServer(port = PORT) {
+  return new Promise((resolve, reject) => {
+    const server = app.listen(port, '127.0.0.1', () => resolve({ server, port: server.address().port }));
+    server.once('error', reject);
+  });
+}
+
+// `node src/index.js` (modo web): arranca directamente.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  startServer().then(({ port }) => console.log(`🚀 API de CodeRuta en http://localhost:${port}`));
+}

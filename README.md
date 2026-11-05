@@ -23,9 +23,25 @@ npm run build
 npm start
 ```
 
+## App de escritorio (Electron)
+
+CodeRuta también funciona como aplicación de escritorio para Windows. Electron arranca el servidor Express dentro de la app y abre una ventana con la interfaz: no hace falta navegador ni internet.
+
+```bash
+npm run desktop   # compila la interfaz y abre la app de escritorio
+npm run dist      # genera el instalador: release/CodeRuta-Setup-<versión>.exe
+npm run icon      # regenera build/icon.png
+```
+
+- Los datos se guardan en `%APPDATA%\CodeRuta\data\coderuta.db`, así que sobreviven a actualizaciones y reinstalaciones.
+- El instalador no está firmado: la primera vez Windows SmartScreen puede avisar. Pulsa "Más información" → "Ejecutar de todas formas".
+- Para publicar una versión nueva, sube `version` en `package.json` y ejecuta `npm run dist`.
+
 ## Estructura
 
 ```
+desktop/main.cjs            Proceso principal de Electron (app de escritorio)
+build/icon.png              Icono de la app
 server/                     Backend: Node + Express + SQLite
   src/index.js              Endpoints de la API
   src/db.js                 Esquema de la base de datos
