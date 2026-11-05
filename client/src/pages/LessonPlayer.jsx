@@ -8,6 +8,7 @@ import CodeBlock from '../components/CodeBlock.jsx';
 import Spinner from '../components/Spinner.jsx';
 import { heartTitle } from '../components/TopBar.jsx';
 import { isCorrect, isReady, solutionText } from '../exercises.js';
+import { runCode, runPassed } from '../codeRunner.js';
 
 export default function LessonPlayer({ mode }) {
   const { id } = useParams();
@@ -26,6 +27,8 @@ export default function LessonPlayer({ mode }) {
   const [solved, setSolved] = useState(0);
   const [result, setResult] = useState(null);
   const checkedRef = useRef(false);
+  const [drafts, setDrafts] = useState({}); // código escrito en cada reto, para no perderlo al repetirlo
+  const [running, setRunning] = useState(false);
 
   useEffect(() => {
     let alive = true;
@@ -53,18 +56,31 @@ export default function LessonPlayer({ mode }) {
   const ex = data?.exercises[exIdx];
   const ready = ex ? isReady(ex, value) : false;
 
-  function check() {
+  async function check() {
     if (feedback || !ready || checkedRef.current) return;
     checkedRef.current = true; // evita dobles comprobaciones si se pulsa Enter muy rápido
-    const ok = isCorrect(ex, value);
-    setFeedback({ correct: ok });
+
+    let ok;
+    let run = null;
+    if (ex.type === 'code') {
+      setDrafts((d) => ({ ...d, [exIdx]: value }));
+      setRunning(true);
+      run = await runCode(value, ex.tests);
+      setRunning(false);
+      ok = runPassed(run);
+    } else {
+      ok = isCorrect(ex, value);
+    }
+
+    setFeedback({ correct: ok, run });
     if (!(exIdx in firstTry)) setFirstTry((f) => ({ ...f, [exIdx]: ok }));
     if (ok) {
       setSolved((n) => n + 1);
       return;
     }
     if (kind !== 'exam') setQueue((q) => [...q, exIdx]);
-    if (kind === 'lesson') {
+    // Los retos de código no quitan vidas: equivocarse programando es parte de aprender.
+    if (kind === 'lesson' && ex.type !== 'code') {
       setUser((u) => ({ ...u, hearts: Math.max(0, u.hearts - 1) }));
       api.loseHeart(user.id).then(setUser).catch(() => {});
     }
@@ -76,7 +92,7 @@ export default function LessonPlayer({ mode }) {
     if (pos + 1 >= queue.length) return finish();
     checkedRef.current = false;
     setPos((p) => p + 1);
-    setValue(null);
+    setValue(drafts[queue[pos + 1]] ?? null);
     setFeedback(null);
   }
 
@@ -102,6 +118,8 @@ export default function LessonPlayer({ mode }) {
     if (phase !== 'play') return;
     const onKey = (e) => {
       if (e.key !== 'Enter') return;
+      // En el editor de código, Enter es un salto de línea; Ctrl/Cmd + Enter comprueba.
+      if (e.target.tagName === 'TEXTAREA' && !(e.ctrlKey || e.metaKey)) return;
       e.preventDefault(); // evita que Enter "pulse" además el botón enfocado
       feedback ? next() : check();
     };
@@ -276,10 +294,13 @@ export default function LessonPlayer({ mode }) {
           <div className="feedback">
             {feedback && (
               <>
-                <strong className="feedback-title">{feedback.correct ? '¡Correcto! 🎉' : 'No es correcto 😅'}</strong>
+                <strong className="feedback-title">
+                  {feedback.correct ? (feedback.run ? '¡Todas las pruebas pasan! 🎉' : '¡Correcto! 🎉') : 'No es correcto 😅'}
+                </strong>
+                {feedback.run && <RunReport run={feedback.run} />}
                 {solution && (
                   <div className="feedback-solution">
-                    <span>Respuesta correcta:</span>
+                    <span>{ex.type === 'code' ? 'Una solución posible:' : 'Respuesta correcta:'}</span>
                     <pre>{solution}</pre>
                   </div>
                 )}
@@ -290,13 +311,29 @@ export default function LessonPlayer({ mode }) {
           </div>
           <button
             className={`btn btn-lg ${feedback && !feedback.correct ? 'btn-danger' : 'btn-success'}`}
-            disabled={!feedback && !ready}
+            disabled={(!feedback && !ready) || running}
             onClick={feedback ? next : check}
           >
-            {feedback ? 'Continuar' : 'Comprobar'}
+            {feedback ? 'Continuar' : running ? 'Ejecutando…' : ex.type === 'code' ? 'Ejecutar pruebas' : 'Comprobar'}
           </button>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function RunReport({ run }) {
+  if (run.timedOut) return <p className="run-error">⏱️ Tiempo agotado: ¿hay un bucle infinito?</p>;
+  if (run.error) return <p className="run-error">⚠️ {run.error}</p>;
+  return (
+    <div className="run-report">
+      {run.results.map((r, i) => (
+        <div key={i} className={r.pass ? 'run-pass' : 'run-fail'}>
+          {r.pass ? '✓' : '✗'} <code>{r.call}</code> → <code>{r.got}</code>
+          {!r.pass && <span className="small"> (esperado {r.expected})</span>}
+        </div>
+      ))}
+      {run.logs?.length > 0 && <pre className="run-logs">{run.logs.join('\n')}</pre>}
     </div>
   );
 }

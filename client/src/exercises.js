@@ -21,6 +21,8 @@ export function isReady(ex, value) {
       return Array.isArray(value) && value.length === ex.lines.length;
     case 'match':
       return !!value?.done;
+    case 'code':
+      return typeof value === 'string' && value.trim() !== '' && value.trim() !== ex.starter.trim();
     default:
       return false;
   }
@@ -49,6 +51,8 @@ export function solutionText(ex) {
       return ex.code.replace('___', [].concat(ex.answer)[0]);
     case 'order':
       return ex.lines.join('\n');
+    case 'code':
+      return ex.solution ?? null;
     default:
       return null;
   }

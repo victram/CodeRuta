@@ -60,28 +60,47 @@ client/                     Frontend: React + Vite
 
 ## Ruta de aprendizaje
 
-| Ruta | Cursos | Estado |
-|---|---|---|
-| 🖥️ Frontend | HTML → CSS → JavaScript → React | ✅ Unidades 1 y 2 de cada curso |
-| 🛠️ Backend | Python, Node.js + Express, SQL, APIs REST, Git | ✅ Unidades 1 y 2 de cada curso |
+7 rutas · 23 cursos · 47 unidades · 143 lecciones · 715 ejercicios (43 retos de código) · 47 exámenes.
 
-Total: 9 cursos, 18 unidades, 54 lecciones, 270 ejercicios y 18 exámenes.
+| Ruta | Cursos |
+|---|---|
+| 🖥️ Frontend | HTML · CSS · JavaScript · TypeScript · React |
+| 🛠️ Backend | Python · Java · Spring Boot · Node.js + Express · SQL · APIs REST · Docker y DevOps · Git |
+| 🧮 Ciencias de la computación | Estructuras de datos · Algoritmos |
+| 📊 Análisis de datos | Python para datos (NumPy/pandas) · Estadística y visualización |
+| 🤖 Inteligencia Artificial | Fundamentos de IA · Machine Learning · Programar con IA · Gana dinero con IA |
+| 💼 Entrevistas técnicas | Problemas de entrevista · Preguntas técnicas y de diseño |
+| 🛡️ Ciberseguridad | Novato · Principiante · Profesional (🔒 próximamente) |
 
-| Curso | Unidad 1 | Unidad 2 |
-|---|---|---|
-| HTML | Estructura, textos, enlaces, imágenes, listas | Formularios, validación, HTML semántico |
-| CSS | Selectores, colores, modelo de caja | Flexbox, Grid, responsive |
-| JavaScript | Variables, condicionales, bucles | Funciones, arrays, objetos |
-| React | JSX, props, useState | Listas y key, formularios, useEffect |
-| Python | Variables, condicionales, listas y bucles | Funciones, diccionarios, f-strings y errores |
-| Node.js | Node, npm, Express, rutas y JSON | Middleware, CRUD con SQLite, errores y .env |
-| SQL | SELECT, INSERT/UPDATE/DELETE, JOIN | CREATE TABLE, relaciones, búsquedas avanzadas |
-| APIs | HTTP, REST, fetch | Paginación, autenticación, CORS y buenas prácticas |
-| Git | Commits, ramas, GitHub | Deshacer cambios, buenos commits, trabajo en equipo |
-| 🤖 Inteligencia Artificial | Fundamentos, Programar con IA, Gana dinero con IA | 🔒 Próximamente |
-| 🛡️ Ciberseguridad | Novato, Principiante, Profesional | 🔒 Próximamente |
+| Curso | Temas |
+|---|---|
+| HTML | Estructura, textos, enlaces, imágenes · Formularios, validación, HTML semántico |
+| CSS | Selectores, colores, modelo de caja · Flexbox, Grid, responsive |
+| JavaScript | Variables, condicionales, bucles · Funciones, arrays, objetos · 💻 retos prácticos (FizzBuzz…) |
+| TypeScript | Tipos, uniones, interfaces · Funciones tipadas, genéricos, utility types |
+| React | JSX, props, useState · Listas, formularios, useEffect |
+| Python | Variables, condicionales, listas · Funciones, diccionarios, f-strings, errores |
+| Java | Sintaxis, bucles, arrays · POO, herencia, interfaces, colecciones · Excepciones, streams, records |
+| Spring Boot | Controladores REST, inyección de dependencias · JPA, validación, configuración, seguridad, tests |
+| Node.js | Express, rutas y JSON · Middleware, CRUD con SQLite, errores y .env |
+| SQL | SELECT, INSERT/UPDATE/DELETE, JOIN · CREATE TABLE, relaciones, búsquedas avanzadas |
+| APIs | HTTP, REST, fetch · Paginación, autenticación, CORS |
+| Docker y DevOps | Imágenes, Dockerfile, Compose · CI/CD, la nube, producción |
+| Git | Commits, ramas, GitHub · Deshacer cambios, buenos commits, trabajo en equipo |
+| Estructuras de datos 💻 | Arrays, pilas, colas, listas enlazadas · Hash maps, árboles, grafos, heaps |
+| Algoritmos 💻 | Big O, búsqueda, ordenación · Recursión, dos punteros, ventana deslizante, programación dinámica |
+| Python para datos | NumPy, DataFrames, filtros · Limpieza, groupby, merge y pivot |
+| Estadística 💻 | Media/mediana, dispersión, correlación · Gráficos, Matplotlib/Seaborn, storytelling y BI |
+| Fundamentos de IA | IA/ML/deep learning, tipos de aprendizaje · LLMs, limitaciones, ética |
+| Machine Learning 💻 | Regresión, train/test, métricas · scikit-learn, preparar datos, redes neuronales |
+| Programar con IA 💻 | Prompting, técnicas, asistentes de código · APIs de modelos, embeddings y RAG, agentes |
+| Gana dinero con IA 💻 | Modelos de negocio, automatización, micro-SaaS · Validar, precios y costes, legal y ética |
+| Problemas de entrevista 💻 | Método, Two Sum, strings, paréntesis · Kadane, búsqueda binaria, árboles |
+| Preguntas técnicas | POO y SOLID, JS y web, bases de datos · Diseño de sistemas, STAR, CV y oferta |
 
-Cada **curso** tiene **unidades**; cada unidad tiene **lecciones** (teoría + 5 ejercicios) y termina con un **examen** de 10 preguntas mezcladas (aprobado con 80 %). Las lecciones se desbloquean en orden.
+💻 = incluye retos prácticos de código.
+
+Cada **curso** tiene **unidades**; cada unidad tiene **lecciones** (teoría + ~5 ejercicios) y termina con un **examen** de 10 preguntas mezcladas (aprobado con 80 %). Las lecciones se desbloquean en orden.
 
 ### Reglas del juego
 
@@ -90,6 +109,7 @@ Cada **curso** tiene **unidades**; cada unidad tiene **lecciones** (teoría + 5 
 - **Racha**: días seguidos con al menos una actividad.
 - **Meta diaria**: 10 / 20 / 30 / 50 XP.
 - Los ejercicios fallados se repiten al final de la lección.
+- Los **retos de código** no quitan vidas; al repetirlos se conserva lo que escribiste.
 
 ## Añadir contenido
 
@@ -102,7 +122,14 @@ Tipos de ejercicio:
 { type: 'fill',   prompt: 'Completa…', code: 'let x ___ 5;', answer: '=', options: ['=', '==', ':'] }
 { type: 'order',  prompt: 'Ordena…', lines: ['línea 1', 'línea 2', 'línea 3'] }   // en el orden correcto
 { type: 'match',  prompt: 'Une…', pairs: [['GET', 'Leer'], ['POST', 'Crear']] }
+{ type: 'code',   prompt: 'Escribe suma(a, b)…', starter: 'function suma(a, b) {
+}', solution: '…',
+  tests: [{ call: 'suma(2, 3)', expected: 5 }], hint: 'opcional' }
 ```
+
+Los **retos de código** (JavaScript) se ejecutan en el navegador dentro de un Web Worker con límite de 2 s. Al cargar el contenido, el servidor ejecuta la `solution` de cada reto contra sus `tests`: si no los pasa, te avisa.
+
+Los cursos nuevos usan los atajos de `server/src/content/_helpers.js` (`card`, `choice`, `fill`, `order`, `match`, `reto`, `lesson`, `unit`), que generan estos mismos objetos con menos texto.
 
 Para activar un curso "Próximamente" basta con añadirle `units: [...]`.
 
@@ -111,8 +138,11 @@ Al arrancar se valida el contenido: si un ejercicio está mal formado, el servid
 ## Siguientes pasos
 
 - [x] Unidad 2 de cada curso de frontend y backend
-- [ ] Unidad 3 (JS asíncrono y DOM, TypeScript, React Router, POO en Python, despliegue…)
-- [ ] Ruta de Inteligencia Artificial (incluye cómo ganar dinero con IA)
+- [x] Java, Spring Boot, TypeScript, Docker y DevOps
+- [x] Estructuras de datos, algoritmos y entrevistas técnicas
+- [x] Análisis de datos
+- [x] Ruta de Inteligencia Artificial (incluye cómo ganar dinero con IA)
+- [x] Retos de código que se ejecutan y corrigen en el navegador
 - [ ] Ruta de Ciberseguridad en 3 niveles: novato, principiante y profesional
-- [ ] Ejercicios de escribir código y ejecutarlo en el navegador
+- [ ] Unidad 3 de los cursos base (JS asíncrono y DOM, React Router, POO en Python…)
 - [ ] Logros/insignias y repaso inteligente de los fallos

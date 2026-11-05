@@ -1,3 +1,80 @@
+import { card, choice, reto, lesson } from './_helpers.js';
+
+const retosUnidad1 = lesson(
+  'Retos prácticos: lógica',
+  [
+    card(
+      '¡Hora de programar!',
+      'En los **retos** escribes código de verdad y se comprueba con **pruebas automáticas**. Cada prueba llama a tu función y compara el resultado con el esperado.\n\nNo te preocupes si fallas: los retos no quitan vidas y puedes ver una solución.',
+      `function doble(n) {\n  return n * 2;\n}\n// Prueba: doble(4) → 8 ✓`
+    ),
+  ],
+  [
+    reto(
+      'Escribe esMayorDeEdad(edad): devuelve true si la edad es 18 o más.',
+      `function esMayorDeEdad(edad) {\n  // tu código aquí\n}`,
+      [['esMayorDeEdad(20)', true], ['esMayorDeEdad(18)', true], ['esMayorDeEdad(15)', false]],
+      `function esMayorDeEdad(edad) {\n  return edad >= 18;\n}`,
+      { hint: 'Puedes devolver directamente la comparación: return edad >= 18;' }
+    ),
+    reto(
+      'Escribe parOImpar(n): devuelve "par" o "impar".',
+      `function parOImpar(n) {\n  \n}`,
+      [['parOImpar(4)', 'par'], ['parOImpar(7)', 'impar'], ['parOImpar(0)', 'par']],
+      `function parOImpar(n) {\n  if (n % 2 === 0) return "par";\n  return "impar";\n}`,
+      { hint: 'n % 2 da el resto de dividir entre 2: 0 si es par.' }
+    ),
+    reto(
+      'Escribe sumarHasta(n): la suma de todos los números del 1 al n (usa un bucle).',
+      `function sumarHasta(n) {\n  let total = 0;\n  // bucle del 1 al n\n  return total;\n}`,
+      [['sumarHasta(3)', 6], ['sumarHasta(10)', 55], ['sumarHasta(1)', 1]],
+      `function sumarHasta(n) {\n  let total = 0;\n  for (let i = 1; i <= n; i++) total += i;\n  return total;\n}`
+    ),
+    reto(
+      'FizzBuzz (¡clásico de entrevistas!): fizzBuzz(n) devuelve "FizzBuzz" si n es múltiplo de 3 y de 5, "Fizz" si solo de 3, "Buzz" si solo de 5, y si no el número como texto.',
+      `function fizzBuzz(n) {\n  \n}`,
+      [['fizzBuzz(15)', 'FizzBuzz'], ['fizzBuzz(9)', 'Fizz'], ['fizzBuzz(10)', 'Buzz'], ['fizzBuzz(7)', '7']],
+      `function fizzBuzz(n) {\n  if (n % 15 === 0) return "FizzBuzz";\n  if (n % 3 === 0) return "Fizz";\n  if (n % 5 === 0) return "Buzz";\n  return String(n);\n}`,
+      { hint: 'Comprueba primero el caso de 3 y 5 a la vez (múltiplo de 15).' }
+    ),
+    choice('¿Qué devuelve String(7)?', ['7', '"7"', 'undefined', 'Error'], 1),
+  ]
+);
+
+const retosUnidad2 = lesson(
+  'Retos prácticos: datos',
+  [card('Funciones, arrays y objetos en acción', 'Estos retos combinan todo lo de la unidad. Recuerda: `map` transforma, `filter` selecciona, y los objetos se leen con `obj.clave`.')],
+  [
+    reto(
+      'Escribe soloPares(nums): devuelve un array con solo los números pares.',
+      `function soloPares(nums) {\n  \n}`,
+      [['soloPares([1, 2, 3, 4])', [2, 4]], ['soloPares([1, 3])', []], ['soloPares([10, 15, 20])', [10, 20]]],
+      `function soloPares(nums) {\n  return nums.filter((n) => n % 2 === 0);\n}`,
+      { hint: 'return nums.filter((n) => ...);' }
+    ),
+    reto(
+      'Escribe nombres(usuarios): recibe un array de objetos { nombre, edad } y devuelve solo los nombres.',
+      `function nombres(usuarios) {\n  \n}`,
+      [['nombres([{ nombre: "Ana", edad: 30 }, { nombre: "Leo", edad: 25 }])', ['Ana', 'Leo']], ['nombres([])', []]],
+      `function nombres(usuarios) {\n  return usuarios.map((u) => u.nombre);\n}`
+    ),
+    reto(
+      'Escribe totalCarrito(items): suma precio × cantidad de cada producto { precio, cantidad }.',
+      `function totalCarrito(items) {\n  \n}`,
+      [['totalCarrito([{ precio: 10, cantidad: 2 }, { precio: 5, cantidad: 1 }])', 25], ['totalCarrito([])', 0]],
+      `function totalCarrito(items) {\n  let total = 0;\n  for (const item of items) total += item.precio * item.cantidad;\n  return total;\n}`
+    ),
+    reto(
+      'Escribe contarVocales(texto): cuántas vocales (a, e, i, o, u, en minúscula) tiene.',
+      `function contarVocales(texto) {\n  \n}`,
+      [['contarVocales("hola")', 2], ['contarVocales("programar")', 3], ['contarVocales("xyz")', 0]],
+      `function contarVocales(texto) {\n  let n = 0;\n  for (const letra of texto) {\n    if ("aeiou".includes(letra)) n++;\n  }\n  return n;\n}`,
+      { hint: '"aeiou".includes(letra) te dice si una letra es vocal.' }
+    ),
+    choice('¿Qué método usarías para quedarte con los productos de menos de 10 €?', ['map', 'filter', 'push', 'join'], 1),
+  ]
+);
+
 export default {
   id: 'javascript',
   title: 'JavaScript',
@@ -175,6 +252,7 @@ export default {
             },
           ],
         },
+        retosUnidad1,
       ],
     },
     {
@@ -332,6 +410,7 @@ export default {
             },
           ],
         },
+        retosUnidad2,
       ],
     },
   ],

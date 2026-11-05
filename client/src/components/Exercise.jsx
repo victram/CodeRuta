@@ -145,15 +145,62 @@ function Match({ ex, onChange, locked }) {
   );
 }
 
+function Code({ ex, value, onChange, locked }) {
+  const text = value ?? ex.starter;
+
+  function onKeyDown(e) {
+    if (e.key !== 'Tab') return;
+    e.preventDefault(); // Tab inserta 2 espacios en lugar de salir del editor
+    const el = e.target;
+    const { selectionStart: s, selectionEnd: end } = el;
+    const next = text.slice(0, s) + '  ' + text.slice(end);
+    onChange(next);
+    requestAnimationFrame(() => el.setSelectionRange(s + 2, s + 2));
+  }
+
+  return (
+    <div className="code-ex">
+      <div className="editor-head">
+        <span>JavaScript</span>
+        <span className="muted small">Ctrl + Enter para comprobar</span>
+      </div>
+      <textarea
+        className="code-editor"
+        value={text}
+        onChange={(e) => onChange(e.target.value)}
+        onKeyDown={onKeyDown}
+        disabled={locked}
+        spellCheck={false}
+        autoCapitalize="off"
+        autoComplete="off"
+        autoCorrect="off"
+        rows={Math.max(7, text.split('\n').length + 2)}
+        aria-label="Editor de código"
+        autoFocus
+      />
+      <div className="tests">
+        <span className="tests-title">Pruebas que debe pasar</span>
+        {ex.tests.map((t, i) => (
+          <code key={i}>
+            {t.call} → {JSON.stringify(t.expected)}
+          </code>
+        ))}
+      </div>
+      {ex.hint && <p className="muted small">💡 Pista: {ex.hint}</p>}
+    </div>
+  );
+}
+
 const typeLabel = {
   choice: 'Elige la respuesta',
   fill: 'Completa el hueco',
   order: 'Ordena las líneas',
   match: 'Une las parejas',
+  code: '💻 Reto práctico',
 };
 
 export default function Exercise({ ex, value, onChange, locked }) {
-  const Comp = { choice: Choice, fill: Fill, order: Order, match: Match }[ex.type];
+  const Comp = { choice: Choice, fill: Fill, order: Order, match: Match, code: Code }[ex.type];
   return (
     <div className="exercise">
       <span className="exercise-type">{typeLabel[ex.type]}</span>

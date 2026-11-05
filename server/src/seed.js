@@ -1,9 +1,38 @@
 // Carga el contenido de server/src/content en SQLite.
 // Se ejecuta solo al arrancar si el contenido cambió. `npm run seed` lo fuerza.
 import crypto from 'node:crypto';
+import vm from 'node:vm';
 import { pathToFileURL } from 'node:url';
 import { db } from './db.js';
 import { tracks } from './content/index.js';
+
+// Misma comparación que hace el navegador (claves de objetos ordenadas).
+const stable = (v) =>
+  JSON.stringify(v, (k, val) =>
+    val && typeof val === 'object' && !Array.isArray(val)
+      ? Object.fromEntries(Object.keys(val).sort().map((key) => [key, val[key]]))
+      : val
+  );
+
+// Ejecuta la solución oficial de un reto contra sus pruebas: así nunca publicamos un reto imposible.
+function checkSolution(ex, fail) {
+  let results;
+  try {
+    // Las pruebas se ejecutan dentro del vm para que el timeout también cubra bucles infinitos.
+    const src = `${ex.solution}\n;[${ex.tests.map((t) => `() => (${t.call})`).join(',\n')}]
+      .map((f) => { try { return { ok: true, v: f() }; } catch (e) { return { ok: false, e: String(e) }; } })`;
+    results = vm.runInNewContext(src, { console: { log() {} } }, { timeout: 1000 });
+  } catch (err) {
+    fail(`la solución no compila o no termina: ${err.message}`);
+  }
+  ex.tests.forEach((t, i) => {
+    const r = results[i];
+    if (!r.ok) fail(`la solución lanza un error en "${t.call}": ${r.e}`);
+    if (stable(r.v) !== stable(t.expected)) {
+      fail(`la solución no pasa "${t.call}": esperado ${stable(t.expected)}, obtenido ${stable(r.v)}`);
+    }
+  });
+}
 
 function validate(ex, where) {
   const fail = (msg) => {
@@ -27,6 +56,14 @@ function validate(ex, where) {
       break;
     case 'match':
       if (!Array.isArray(ex.pairs) || ex.pairs.length < 2) fail('"match" necesita al menos 2 "pairs"');
+      break;
+    case 'code':
+      if (typeof ex.starter !== 'string') fail('"code" necesita "starter"');
+      if (typeof ex.solution !== 'string') fail('"code" necesita "solution"');
+      if (!Array.isArray(ex.tests) || !ex.tests.length || ex.tests.some((t) => typeof t.call !== 'string' || !('expected' in t))) {
+        fail('"code" necesita "tests": [{ call, expected }]');
+      }
+      checkSolution(ex, fail);
       break;
     default:
       fail(`tipo de ejercicio desconocido "${ex.type}"`);
