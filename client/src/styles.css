@@ -53,6 +53,7 @@ body {
 }
 body {
   background: var(--bg);
+  transition: background-color 0.35s ease;
   color: var(--text);
   font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 16px;
@@ -495,8 +496,34 @@ button {
 .goal .progress > span {
   background: var(--gold);
 }
+/* Color base de cada ruta: tiñe el fondo de su banda en el inicio
+   y el de toda la página dentro de sus cursos y lecciones. */
+body.tinted {
+  background-color: color-mix(in srgb, var(--track) 12%, var(--bg));
+}
+body.tinted .lesson-footer:not(.is-ok):not(.is-bad) {
+  background: color-mix(in srgb, var(--track) 6%, var(--surface));
+}
 .track {
-  margin-top: 36px;
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: calc(var(--radius) + 6px);
+  background: color-mix(in srgb, var(--track) 12%, var(--bg));
+  border: 2px solid color-mix(in srgb, var(--track) 30%, transparent);
+}
+.track .course-card {
+  border-color: color-mix(in srgb, var(--track) 22%, var(--border));
+}
+.track a.course-card:hover {
+  border-color: var(--track);
+}
+.track-header h2 {
+  color: color-mix(in srgb, var(--track) 75%, var(--text));
+}
+@media (max-width: 760px) {
+  .track {
+    padding: 14px;
+  }
 }
 .track-header {
   display: flex;

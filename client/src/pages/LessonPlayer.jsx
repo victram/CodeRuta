@@ -9,6 +9,7 @@ import Spinner from '../components/Spinner.jsx';
 import { heartTitle } from '../components/TopBar.jsx';
 import { isCorrect, isReady, solutionText } from '../exercises.js';
 import { runCode, runPassed } from '../codeRunner.js';
+import { useTrackTheme } from '../useTrackTheme.js';
 
 export default function LessonPlayer({ mode }) {
   const { id } = useParams();
@@ -49,6 +50,8 @@ export default function LessonPlayer({ mode }) {
       alive = false;
     };
   }, [id, mode, user.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useTrackTheme(data?.lesson.trackColor);
 
   const kind = data?.lesson.kind;
   const exitTo = data?.lesson.courseId ? `/curso/${data.lesson.courseId}` : '/';

@@ -133,7 +133,13 @@ app.get('/api/tracks', (req, res) => {
 
 app.get('/api/courses/:id', (req, res) => {
   const userId = Number(req.query.userId) || 0;
-  const course = db.prepare('SELECT * FROM courses WHERE id = ?').get(req.params.id);
+  const course = db
+    .prepare(
+      `SELECT c.*, t.color AS track_color, t.title AS track_title
+       FROM courses c JOIN tracks t ON t.id = c.track_id
+       WHERE c.id = ?`
+    )
+    .get(req.params.id);
   if (!course) return notFound(res, 'Curso');
 
   const units = db.prepare('SELECT * FROM units WHERE course_id = ? ORDER BY position').all(course.id);
@@ -170,10 +176,11 @@ app.get('/api/courses/:id', (req, res) => {
 app.get('/api/lessons/:id', (req, res) => {
   const lesson = db
     .prepare(
-      `SELECT l.*, u.title AS unit_title, u.course_id, c.title AS course_title, c.color, c.icon
+      `SELECT l.*, u.title AS unit_title, u.course_id, c.title AS course_title, c.color, c.icon, t.color AS track_color
        FROM lessons l
        JOIN units u ON u.id = l.unit_id
        JOIN courses c ON c.id = u.course_id
+       JOIN tracks t ON t.id = c.track_id
        WHERE l.id = ?`
     )
     .get(req.params.id);
@@ -201,6 +208,7 @@ app.get('/api/lessons/:id', (req, res) => {
       courseId: lesson.course_id,
       courseTitle: lesson.course_title,
       color: lesson.color,
+      trackColor: lesson.track_color,
       icon: lesson.icon,
       theory: parseJSON(lesson.theory, []),
       passMark: EXAM_PASS,

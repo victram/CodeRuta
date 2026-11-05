@@ -23,7 +23,17 @@ export default function RichText({ text }) {
             </ul>
           );
         }
-        return <p key={i}>{inline(block)}</p>;
+        // Un salto de línea simple dentro de un párrafo se respeta como <br>.
+        return (
+          <p key={i}>
+            {lines.map((l, j) => (
+              <span key={j}>
+                {j > 0 && <br />}
+                {inline(l)}
+              </span>
+            ))}
+          </p>
+        );
       })}
     </div>
   );

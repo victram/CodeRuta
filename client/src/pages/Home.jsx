@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {tracks.map((t) => (
-        <section key={t.id} className={`track ${t.status === 'coming_soon' ? 'track-soon' : ''}`}>
+        <section key={t.id} className={`track ${t.status === 'coming_soon' ? 'track-soon' : ''}`} style={{ '--track': t.color }}>
           <header className="track-header">
             <span className="track-icon" style={{ background: t.color }}>
               {t.icon}

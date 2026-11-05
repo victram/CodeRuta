@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { api } from '../api.js';
 import { useUser } from '../UserContext.jsx';
 import Spinner from '../components/Spinner.jsx';
+import { useTrackTheme } from '../useTrackTheme.js';
 
 // Desplazamiento horizontal de cada nodo para dibujar un camino en zigzag.
 const OFFSETS = [0, 52, 84, 52, 0, -52, -84, -52];
@@ -52,6 +53,8 @@ export default function Course() {
     setCourse(null);
     api.course(id, user.id).then(setCourse).catch((e) => setError(e.message));
   }, [id, user.id]);
+
+  useTrackTheme(course?.track_color);
 
   if (error) return <div className="page"><p className="error">{error}</p><Link to="/">← Volver</Link></div>;
   if (!course) return <Spinner />;
