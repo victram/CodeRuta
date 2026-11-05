@@ -60,7 +60,7 @@ client/                     Frontend: React + Vite
 
 ## Ruta de aprendizaje
 
-7 rutas · 23 cursos · 47 unidades · 143 lecciones · 715 ejercicios (43 retos de código) · 47 exámenes.
+7 rutas · 26 cursos · 53 unidades · 161 lecciones · 805 ejercicios (49 retos de código) · 53 exámenes.
 
 | Ruta | Cursos |
 |---|---|
@@ -70,7 +70,7 @@ client/                     Frontend: React + Vite
 | 📊 Análisis de datos | Python para datos (NumPy/pandas) · Estadística y visualización |
 | 🤖 Inteligencia Artificial | Fundamentos de IA · Machine Learning · Programar con IA · Gana dinero con IA |
 | 💼 Entrevistas técnicas | Problemas de entrevista · Preguntas técnicas y de diseño |
-| 🛡️ Ciberseguridad | Novato · Principiante · Profesional (🔒 próximamente) |
+| 🛡️ Ciberseguridad | Novato · Principiante · Profesional |
 
 | Curso | Temas |
 |---|---|
@@ -97,6 +97,9 @@ client/                     Frontend: React + Vite
 | Gana dinero con IA 💻 | Modelos de negocio, automatización, micro-SaaS · Validar, precios y costes, legal y ética |
 | Problemas de entrevista 💻 | Método, Two Sum, strings, paréntesis · Kadane, búsqueda binaria, árboles |
 | Preguntas técnicas | POO y SOLID, JS y web, bases de datos · Diseño de sistemas, STAR, CV y oferta |
+| Ciberseguridad: Novato 💻 | Contraseñas, 2FA, phishing · Malware y copias, Wi-Fi, privacidad e ingeniería social |
+| Ciberseguridad: Principiante 💻 | Tríada CIA, redes, criptografía · Inyección SQL, XSS, autenticación segura |
+| Ciberseguridad: Profesional 💻 | Hacking ético y legalidad, pentesting, OWASP Top 10 · DevSecOps y nube, SIEM, respuesta a incidentes y carrera |
 
 💻 = incluye retos prácticos de código.
 
@@ -143,6 +146,6 @@ Al arrancar se valida el contenido: si un ejercicio está mal formado, el servid
 - [x] Análisis de datos
 - [x] Ruta de Inteligencia Artificial (incluye cómo ganar dinero con IA)
 - [x] Retos de código que se ejecutan y corrigen en el navegador
-- [ ] Ruta de Ciberseguridad en 3 niveles: novato, principiante y profesional
+- [x] Ruta de Ciberseguridad en 3 niveles: novato, principiante y profesional
 - [ ] Unidad 3 de los cursos base (JS asíncrono y DOM, React Router, POO en Python…)
 - [ ] Logros/insignias y repaso inteligente de los fallos

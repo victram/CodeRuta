@@ -37,6 +37,10 @@ import iaNegocio from './ia-negocio.js';
 // Entrevistas
 import entrevistasCodigo from './entrevistas-codigo.js';
 import entrevistasTeoria from './entrevistas-teoria.js';
+// Ciberseguridad
+import ciberNovato from './ciber-novato.js';
+import ciberPrincipiante from './ciber-principiante.js';
+import ciberProfesional from './ciber-profesional.js';
 
 export const tracks = [
   {
@@ -92,12 +96,7 @@ export const tracks = [
     title: 'Ciberseguridad',
     icon: '🛡️',
     color: '#1971c2',
-    status: 'coming_soon',
     description: 'Protege sistemas y datos en tres niveles: novato, principiante y profesional.',
-    courses: [
-      { id: 'ciber-novato', title: 'Novato', icon: '🔰', color: '#1971c2', level: 'Nivel 1', description: 'Contraseñas, phishing y hábitos seguros.' },
-      { id: 'ciber-principiante', title: 'Principiante', icon: '🔐', color: '#1971c2', level: 'Nivel 2', description: 'Redes, cifrado y vulnerabilidades web comunes.' },
-      { id: 'ciber-profesional', title: 'Profesional', icon: '🕵️', color: '#1971c2', level: 'Nivel 3', description: 'Pentesting ético, OWASP y respuesta a incidentes.' },
-    ],
+    courses: [ciberNovato, ciberPrincipiante, ciberProfesional],
   },
 ];
