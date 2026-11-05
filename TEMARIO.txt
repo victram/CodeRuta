@@ -1,0 +1,799 @@
+﻿CODERUTA - TEMARIO COMPLETO
+======================================================================
+7 rutas · 26 cursos · 161 lecciones · 805 ejercicios (49 retos de código) · 53 exámenes
+
+Cada lección tiene teoría (los subapartados) y unos 5 ejercicios.
+Cada unidad termina con un examen (se aprueba con un 80 %).
+[Reto] = la lección incluye retos de código en JavaScript.
+
+
+======================================================================
+RUTA 1: DESARROLLO FRONTEND
+Todo lo que ves en la pantalla: estructura, estilo e interactividad.
+======================================================================
+
+1.1  HTML   (Desde cero)
+      La estructura de cualquier página web: etiquetas, textos, enlaces e imágenes.
+      ------------------------------------------------------------
+
+      Unidad 1: Tu primera página web
+        1. ¿Qué es HTML?
+             - HTML es el esqueleto de la web
+             - Anatomía de una etiqueta
+             - Estructura de un documento
+        2. Títulos, párrafos y enlaces
+             - Títulos y párrafos
+             - Enlaces y atributos
+        3. Imágenes y listas
+             - Imágenes
+             - Listas
+        ✔ Examen de la unidad 1: Tu primera página web
+
+      Unidad 2: Formularios y HTML semántico
+        4. Formularios
+             - Pedir datos al usuario
+             - label + input
+        5. Tipos de campo y validación
+             - Tipos de input
+             - Validación sin JavaScript
+        6. HTML semántico
+             - Etiquetas con significado
+             - section, article y div
+        ✔ Examen de la unidad 2: Formularios y HTML semántico
+
+1.2  CSS   (Desde cero)
+      Dale estilo a la web: colores, textos, tamaños y espacios.
+      ------------------------------------------------------------
+
+      Unidad 1: Dale estilo a tu página
+        1. Qué es CSS y los selectores
+             - CSS es la ropa de la web
+             - Tipos de selectores
+        2. Colores y texto
+             - Colores
+             - Texto
+        3. El modelo de caja
+             - Todo es una caja
+             - Ancho y alto
+        ✔ Examen de la unidad 1: Dale estilo a tu página
+
+      Unidad 2: Maquetación
+        4. Flexbox
+             - Elementos en fila
+             - Dirección
+        5. Grid
+             - Filas y columnas
+             - ¿Flex o Grid?
+        6. Diseño responsive
+             - Una web, todas las pantallas
+             - Media queries
+             - Unidades flexibles
+        ✔ Examen de la unidad 2: Maquetación
+
+1.3  JAVASCRIPT   (Desde cero)
+      El lenguaje que da vida a la web. También se usa en el servidor con Node.js.
+      ------------------------------------------------------------
+
+      Unidad 1: Primeros pasos con JavaScript
+        1. Variables y tipos
+             - JavaScript da vida a la web
+             - Variables
+             - Tipos de datos
+        2. Operadores y condicionales
+             - Operadores
+             - if / else
+             - Operadores lógicos
+        3. Bucles
+             - El bucle for
+             - El bucle while
+        4. Retos prácticos: lógica  [Reto]
+             - ¡Hora de programar!
+        ✔ Examen de la unidad 1: Primeros pasos con JavaScript
+
+      Unidad 2: Funciones, arrays y objetos
+        5. Funciones
+             - Bloques reutilizables
+             - Funciones flecha
+        6. Arrays
+             - Listas de valores
+             - map y filter
+        7. Objetos
+             - Datos con nombre
+             - Arrays de objetos
+        8. Retos prácticos: datos  [Reto]
+             - Funciones, arrays y objetos en acción
+        ✔ Examen de la unidad 2: Funciones, arrays y objetos
+
+1.4  TYPESCRIPT   (Intermedio)
+      JavaScript con tipos: detecta errores antes de ejecutar. El estándar en empresas.
+      ------------------------------------------------------------
+
+      Unidad 1: Tipos básicos
+        1. Por qué TypeScript
+             - JavaScript con superpoderes
+             - Tipos primitivos
+        2. Arrays, uniones y literales
+             - Arrays y tuplas
+             - Uniones
+        3. Interfaces y type
+             - Dar forma a los objetos
+             - type vs interface
+        ✔ Examen de la unidad 1: Tipos básicos
+
+      Unidad 2: TypeScript en la práctica
+        4. Funciones tipadas
+             - Parámetros y retorno
+             - Opcionales y por defecto
+        5. Genéricos
+             - Tipos como parámetros
+             - Genéricos en el día a día
+        6. Narrowing y utility types
+             - Estrechar tipos
+             - Utility types
+        ✔ Examen de la unidad 2: TypeScript en la práctica
+
+1.5  REACT   (Intermedio)
+      Construye interfaces con componentes reutilizables. Recomendado tras JavaScript.
+      ------------------------------------------------------------
+
+      Unidad 1: Tus primeros componentes
+        1. Componentes y JSX
+             - ¿Qué es React?
+             - Un componente es una función
+             - JavaScript dentro de JSX
+        2. Props
+             - Pasar datos con props
+             - Las props son de solo lectura
+        3. Estado con useState
+             - La memoria de un componente
+             - Eventos
+        ✔ Examen de la unidad 1: Tus primeros componentes
+
+      Unidad 2: Listas, formularios y efectos
+        4. Renderizar listas
+             - map dentro de JSX
+             - La prop key
+        5. Condicionales y formularios
+             - Mostrar u ocultar
+             - Inputs controlados
+        6. useEffect y datos de una API
+             - Efectos
+             - Cargar datos
+        ✔ Examen de la unidad 2: Listas, formularios y efectos
+
+======================================================================
+RUTA 2: DESARROLLO BACKEND
+Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de versiones.
+======================================================================
+
+2.1  PYTHON   (Desde cero)
+      El lenguaje más fácil de leer. Ideal para empezar, para backend, datos e IA.
+      ------------------------------------------------------------
+
+      Unidad 1: Python desde cero
+        1. print y variables
+             - Hola, Python
+             - Variables
+             - Tipos básicos
+        2. Condicionales
+             - if, elif y else
+             - Lógica en palabras
+        3. Listas y bucles
+             - Listas
+             - El bucle for
+        ✔ Examen de la unidad 1: Python desde cero
+
+      Unidad 2: Funciones y estructuras de datos
+        4. Funciones
+             - def
+             - Valores por defecto
+        5. Diccionarios
+             - Clave → valor
+             - Recorrer un diccionario
+        6. f-strings y errores
+             - f-strings
+             - try / except
+        ✔ Examen de la unidad 2: Funciones y estructuras de datos
+
+2.2  JAVA   (Desde cero)
+      El lenguaje de los bancos, Android y las grandes empresas. Base para Spring Boot.
+      ------------------------------------------------------------
+
+      Unidad 1: Java desde cero
+        1. Hola, Java
+             - Tu primer programa
+             - Tipos y variables
+        2. Condicionales y bucles
+             - if / else y switch
+             - Bucles
+        3. Arrays y Strings
+             - Arrays
+             - Métodos de String
+        ✔ Examen de la unidad 1: Java desde cero
+
+      Unidad 2: Programación orientada a objetos
+        4. Clases y objetos
+             - Molde y galletas
+             - Encapsulación
+        5. Herencia y polimorfismo
+             - extends
+             - Polimorfismo
+        6. Interfaces y colecciones
+             - Interfaces
+             - Colecciones
+        ✔ Examen de la unidad 2: Programación orientada a objetos
+
+      Unidad 3: Java moderno
+        7. Excepciones
+             - try / catch / finally
+             - Lanzar excepciones
+        8. Lambdas y Streams
+             - Lambdas
+             - Streams
+        9. Records y Optional
+             - Records
+             - Optional
+        ✔ Examen de la unidad 3: Java moderno
+
+2.3  SPRING BOOT   (Avanzado)
+      El framework de backend más usado con Java. Recomendado tras el curso de Java.
+      ------------------------------------------------------------
+
+      Unidad 1: Tu primera API con Spring Boot
+        1. ¿Qué es Spring Boot?
+             - Spring sin dolor
+             - Anotaciones
+        2. Controladores REST
+             - @RestController
+             - Parámetros
+        3. Servicios e inyección de dependencias
+             - Capas
+             - Inyección de dependencias
+        ✔ Examen de la unidad 1: Tu primera API con Spring Boot
+
+      Unidad 2: Datos y producción
+        4. Spring Data JPA
+             - Entidades
+             - Repositorios
+        5. Validación y errores
+             - Bean Validation
+             - ResponseEntity y @ControllerAdvice
+        6. Configuración, seguridad y tests
+             - application.properties
+             - Seguridad y tests
+        ✔ Examen de la unidad 2: Datos y producción
+
+2.4  NODE.JS Y EXPRESS   (Intermedio)
+      JavaScript en el servidor: crea tu propia API. Recomendado tras JavaScript.
+      ------------------------------------------------------------
+
+      Unidad 1: Tu primer servidor
+        1. ¿Qué es Node.js?
+             - JavaScript fuera del navegador
+             - npm, el gestor de paquetes
+             - Módulos
+        2. Servidor con Express
+             - Hola, Express
+             - req y res
+        3. Rutas y JSON
+             - Parámetros y cuerpo
+             - JSON
+        ✔ Examen de la unidad 1: Tu primer servidor
+
+      Unidad 2: Una API completa
+        4. Middleware
+             - Funciones intermedias
+             - Middlewares típicos
+        5. CRUD con una base de datos
+             - CRUD
+             - Express + SQLite
+        6. Errores y configuración
+             - Responder errores
+             - Variables de entorno
+        ✔ Examen de la unidad 2: Una API completa
+
+2.5  SQL   (Desde cero)
+      Habla con las bases de datos: consulta, guarda y relaciona información.
+      ------------------------------------------------------------
+
+      Unidad 1: Consultas básicas
+        1. SELECT y WHERE
+             - Tablas
+             - SELECT
+             - Filtrar y ordenar
+        2. INSERT, UPDATE y DELETE
+             - Añadir filas
+             - Modificar y borrar
+        3. JOIN y agregados
+             - Resumir datos
+             - Relacionar tablas
+        ✔ Examen de la unidad 1: Consultas básicas
+
+      Unidad 2: Diseño de bases de datos
+        4. Crear tablas
+             - CREATE TABLE
+             - Restricciones
+        5. Relaciones
+             - Uno a muchos
+             - Muchos a muchos
+        6. Búsquedas avanzadas
+             - Filtros útiles
+             - LIMIT e índices
+        ✔ Examen de la unidad 2: Diseño de bases de datos
+
+2.6  APIS REST Y HTTP   (Intermedio)
+      Cómo se comunican el frontend y el backend: HTTP, REST y fetch.
+      ------------------------------------------------------------
+
+      Unidad 1: Frontend y backend hablan
+        1. Cómo funciona HTTP
+             - Cliente y servidor
+             - Métodos HTTP
+             - Códigos de estado
+        2. Diseñar una API REST
+             - Recursos y verbos
+             - Buenas prácticas
+        3. Consumir una API con fetch
+             - Pedir datos
+             - Enviar datos
+        ✔ Examen de la unidad 1: Frontend y backend hablan
+
+      Unidad 2: APIs profesionales
+        4. Parámetros y paginación
+             - Query params
+             - Paginación
+        5. Autenticación
+             - ¿Quién eres?
+             - Tokens en la cabecera
+        6. CORS y buenas prácticas
+             - CORS
+             - Buenas prácticas
+        ✔ Examen de la unidad 2: APIs profesionales
+
+2.7  DOCKER Y DEVOPS   (Intermedio)
+      Contenedores, CI/CD y despliegue: cómo llevar tu código a producción.
+      ------------------------------------------------------------
+
+      Unidad 1: Contenedores con Docker
+        1. ¿Qué es Docker?
+             - "En mi máquina funciona"
+             - Imagen y contenedor
+        2. El Dockerfile
+             - Receta de una imagen
+             - Instrucciones clave
+        3. Docker Compose
+             - Varios contenedores
+             - Volúmenes
+        ✔ Examen de la unidad 1: Contenedores con Docker
+
+      Unidad 2: Despliegue moderno
+        4. CI/CD con GitHub Actions
+             - Integración y despliegue continuos
+             - Un workflow
+        5. La nube
+             - Dónde desplegar
+             - Escalar
+        6. Producción: buenas prácticas
+             - The Twelve-Factor App
+             - Observabilidad
+        ✔ Examen de la unidad 2: Despliegue moderno
+
+2.8  GIT Y GITHUB   (Desde cero)
+      Guarda el historial de tu código y trabaja en equipo.
+      ------------------------------------------------------------
+
+      Unidad 1: Control de versiones
+        1. ¿Qué es Git?
+             - Puntos de guardado
+             - Los comandos básicos
+        2. Ramas
+             - Líneas de trabajo paralelas
+             - Conflictos
+        3. Trabajar con GitHub
+             - Repositorios remotos
+             - .gitignore y pull requests
+        ✔ Examen de la unidad 1: Control de versiones
+
+      Unidad 2: Git en el día a día
+        4. Deshacer cambios
+             - Volver atrás
+             - Ver el historial
+        5. Buenos commits
+             - Commits pequeños y claros
+             - Conventional Commits
+        6. Trabajo en equipo
+             - El flujo con pull requests
+             - git stash
+        ✔ Examen de la unidad 2: Git en el día a día
+
+======================================================================
+RUTA 3: CIENCIAS DE LA COMPUTACIÓN
+Estructuras de datos y algoritmos: la base para programar bien y aprobar entrevistas.
+======================================================================
+
+3.1  ESTRUCTURAS DE DATOS   (Intermedio)
+      Arrays, pilas, colas, listas, hash maps, árboles y grafos. Con retos en JavaScript.
+      ------------------------------------------------------------
+
+      Unidad 1: Estructuras lineales
+        1. Arrays y strings  [Reto]
+             - Memoria contigua
+             - Strings
+        2. Pilas y colas  [Reto]
+             - Pila (stack): LIFO
+             - Cola (queue): FIFO
+        3. Listas enlazadas  [Reto]
+             - Nodos encadenados
+             - Recorrer una lista
+        ✔ Examen de la unidad 1: Estructuras lineales
+
+      Unidad 2: Estructuras avanzadas
+        4. Hash maps y sets  [Reto]
+             - Búsquedas instantáneas
+             - Set
+        5. Árboles  [Reto]
+             - Jerarquías
+             - Árbol binario de búsqueda (BST)
+        6. Grafos y heaps  [Reto]
+             - Grafos
+             - Heap (montículo)
+        ✔ Examen de la unidad 2: Estructuras avanzadas
+
+3.2  ALGORITMOS   (Intermedio)
+      Big O, búsqueda, ordenación, recursión y programación dinámica. Con retos en JavaScript.
+      ------------------------------------------------------------
+
+      Unidad 1: Fundamentos
+        1. Complejidad: Big O
+             - ¿Cuánto tarda si hay más datos?
+             - Las más comunes
+        2. Búsqueda  [Reto]
+             - Búsqueda lineal
+             - Búsqueda binaria
+        3. Ordenación  [Reto]
+             - Algoritmos clásicos
+             - Cuidado con sort() en JavaScript
+        ✔ Examen de la unidad 1: Fundamentos
+
+      Unidad 2: Técnicas
+        4. Recursión  [Reto]
+             - Una función que se llama a sí misma
+             - Pensar en recursivo
+        5. Dos punteros y ventana deslizante  [Reto]
+             - Dos punteros
+             - Ventana deslizante
+        6. Programación dinámica  [Reto]
+             - No repitas trabajo
+             - Memoización y tabulación
+        ✔ Examen de la unidad 2: Técnicas
+
+======================================================================
+RUTA 4: ANÁLISIS DE DATOS
+Convierte datos en decisiones con Python, pandas, estadística y visualización.
+======================================================================
+
+4.1  PYTHON PARA DATOS   (Intermedio)
+      NumPy y pandas: carga, limpia, transforma y resume datos. Recomendado tras Python.
+      ------------------------------------------------------------
+
+      Unidad 1: Pandas básico
+        1. Análisis de datos y NumPy
+             - ¿Qué hace un analista de datos?
+             - NumPy
+        2. DataFrames
+             - Una tabla en Python
+             - Columnas
+        3. Filtrar y ordenar
+             - Filtrar filas
+             - Ordenar y seleccionar
+        ✔ Examen de la unidad 1: Pandas básico
+
+      Unidad 2: Transformar datos
+        4. Limpieza de datos
+             - Datos sucios
+             - Tipos y textos
+        5. Agrupar y resumir
+             - groupby
+             - Funciones de agregado
+        6. Unir y pivotar
+             - merge
+             - Tablas dinámicas
+        ✔ Examen de la unidad 2: Transformar datos
+
+4.2  ESTADÍSTICA Y VISUALIZACIÓN   (Desde cero)
+      Entiende los datos con estadística básica y cuéntalos con buenos gráficos.
+      ------------------------------------------------------------
+
+      Unidad 1: Estadística descriptiva
+        1. Media, mediana y moda  [Reto]
+             - El valor "típico"
+             - ¿Cuál usar?
+        2. Dispersión  [Reto]
+             - ¿Cómo de repartidos están?
+             - Outliers
+        3. Correlación y causalidad
+             - Correlación
+             - ¡Correlación no es causalidad!
+        ✔ Examen de la unidad 1: Estadística descriptiva
+
+      Unidad 2: Visualizar y comunicar
+        4. Elegir el gráfico
+             - Cada pregunta, su gráfico
+             - Reglas de oro
+        5. Matplotlib y Seaborn
+             - Matplotlib
+             - Seaborn
+        6. Contar historias con datos
+             - Del dato a la decisión
+             - Herramientas de BI
+        ✔ Examen de la unidad 2: Visualizar y comunicar
+
+======================================================================
+RUTA 5: INTELIGENCIA ARTIFICIAL
+Entiende la IA, entrena modelos, construye apps con IA y aprende a ganar dinero con ella.
+======================================================================
+
+5.1  FUNDAMENTOS DE IA   (Desde cero)
+      Qué es la IA, cómo aprende una máquina y cómo funcionan los modelos de lenguaje.
+      ------------------------------------------------------------
+
+      Unidad 1: ¿Qué es la inteligencia artificial?
+        1. IA, ML y deep learning
+             - Muñecas rusas
+             - Reglas vs aprendizaje
+        2. Cómo aprende una máquina
+             - Datos, entrenamiento y modelo
+             - Basura entra, basura sale
+        3. Tipos de aprendizaje
+             - Tres grandes familias
+             - Clasificación y regresión
+        ✔ Examen de la unidad 1: ¿Qué es la inteligencia artificial?
+
+      Unidad 2: Modelos de lenguaje
+        4. ¿Qué es un LLM?
+             - Predecir la siguiente palabra
+             - Tokens y contexto
+        5. Limitaciones
+             - Alucinaciones
+             - Otros límites
+        6. Ética y uso responsable
+             - Privacidad
+             - Responsabilidad
+        ✔ Examen de la unidad 2: Modelos de lenguaje
+
+5.2  MACHINE LEARNING   (Intermedio)
+      Entrena tus propios modelos: regresión, clasificación, métricas y redes neuronales.
+      ------------------------------------------------------------
+
+      Unidad 1: Tu primer modelo
+        1. Regresión lineal  [Reto]
+             - Una recta que predice
+             - El error
+        2. Entrenamiento y test
+             - Separar los datos
+             - Overfitting y underfitting
+        3. Métricas de clasificación  [Reto]
+             - Accuracy no basta
+             - Precision y recall
+        ✔ Examen de la unidad 1: Tu primer modelo
+
+      Unidad 2: Herramientas y redes neuronales
+        4. scikit-learn
+             - El ML clásico en Python
+             - Modelos populares
+        5. Preparar los datos  [Reto]
+             - Features numéricas
+             - Feature engineering
+        6. Redes neuronales  [Reto]
+             - Neuronas artificiales
+             - Cómo aprenden
+        ✔ Examen de la unidad 2: Herramientas y redes neuronales
+
+5.3  PROGRAMAR CON IA   (Intermedio)
+      Prompts que funcionan, asistentes de código y apps con APIs de IA, RAG y agentes.
+      ------------------------------------------------------------
+
+      Unidad 1: Prompting y asistentes
+        1. Anatomía de un buen prompt
+             - Sé específico
+             - Delimitadores
+        2. Técnicas avanzadas
+             - Ejemplos (few-shot)
+             - Pensar paso a paso e iterar
+        3. Programar con asistentes de IA  [Reto]
+             - Tu copiloto
+             - Tú sigues siendo responsable
+        ✔ Examen de la unidad 1: Prompting y asistentes
+
+      Unidad 2: Construir apps con IA
+        4. Usar la API de un modelo  [Reto]
+             - Mensajes
+             - Costes y control
+        5. Embeddings y RAG  [Reto]
+             - Embeddings
+             - RAG
+        6. Agentes y herramientas  [Reto]
+             - De chatbot a agente
+             - Diseñar agentes con cabeza
+        ✔ Examen de la unidad 2: Construir apps con IA
+
+5.4  GANA DINERO CON IA   (Intermedio)
+      Modelos de negocio reales con IA: servicios, productos, precios y clientes. Sin humo.
+      ------------------------------------------------------------
+
+      Unidad 1: Oportunidades reales
+        1. Modelos de negocio con IA
+             - Sin humo
+             - Formas habituales
+        2. Servicios de automatización  [Reto]
+             - Lo que piden las empresas
+             - Herramientas
+        3. Crear un micro-SaaS con IA
+             - Pequeño y enfocado
+             - El stack
+        ✔ Examen de la unidad 1: Oportunidades reales
+
+      Unidad 2: De la idea al cliente
+        4. Validar la idea
+             - Antes de programar
+             - Encontrar clientes
+        5. Precios y costes  [Reto]
+             - Calcula tus costes
+             - Poner precio
+        6. Legal, ética y reputación
+             - Haz las cosas bien
+             - Honestidad
+        ✔ Examen de la unidad 2: De la idea al cliente
+
+======================================================================
+RUTA 6: ENTREVISTAS TÉCNICAS
+Problemas de código, teoría, diseño de sistemas y preguntas de comportamiento.
+======================================================================
+
+6.1  PROBLEMAS DE ENTREVISTA   (Avanzado)
+      Los problemas de código que más se preguntan, resueltos paso a paso en JavaScript.
+      ------------------------------------------------------------
+
+      Unidad 1: Problemas clásicos
+        1. Cómo afrontar un problema  [Reto]
+             - El método
+             - Casos límite
+        2. Arrays y hashing  [Reto]
+             - Two Sum
+             - El truco del hash map
+        3. Strings y pilas  [Reto]
+             - Palíndromos y anagramas
+             - Paréntesis válidos
+        ✔ Examen de la unidad 1: Problemas clásicos
+
+      Unidad 2: Problemas intermedios
+        4. Subarrays  [Reto]
+             - Kadane: suma máxima
+             - Mover ceros
+        5. Búsqueda binaria en entrevistas  [Reto]
+             - Más allá de buscar un número
+             - Posición de inserción
+        6. Árboles y recursión  [Reto]
+             - Profundidad de un árbol
+             - Invertir un árbol
+        ✔ Examen de la unidad 2: Problemas intermedios
+
+6.2  PREGUNTAS TÉCNICAS Y DE DISEÑO   (Avanzado)
+      POO, SOLID, web, bases de datos, diseño de sistemas y preguntas de comportamiento.
+      ------------------------------------------------------------
+
+      Unidad 1: Teoría que siempre preguntan
+        1. POO y SOLID
+             - Los 4 pilares de la POO
+             - SOLID
+        2. JavaScript y la web
+             - JavaScript
+             - La web
+        3. Bases de datos
+             - Conceptos clave
+             - Preguntas típicas
+        ✔ Examen de la unidad 1: Teoría que siempre preguntan
+
+      Unidad 2: Diseño de sistemas y conducta
+        4. Diseño de sistemas
+             - Cómo responder
+             - Piezas habituales
+        5. Preguntas de comportamiento
+             - El método STAR
+             - Prepara tus historias
+        6. CV, portfolio y la oferta
+             - Destacar
+             - La oferta
+        ✔ Examen de la unidad 2: Diseño de sistemas y conducta
+
+======================================================================
+RUTA 7: CIBERSEGURIDAD
+Protege sistemas y datos en tres niveles: novato, principiante y profesional.
+======================================================================
+
+7.1  CIBERSEGURIDAD: NOVATO   (Nivel 1)
+      Protege tus cuentas y dispositivos: contraseñas, 2FA, phishing y hábitos seguros.
+      ------------------------------------------------------------
+
+      Unidad 1: Protege tus cuentas
+        1. Contraseñas seguras  [Reto]
+             - Longitud antes que complejidad
+             - Un gestor de contraseñas
+        2. Verificación en dos pasos
+             - Algo que sabes + algo que tienes
+             - Mejor y peor
+        3. Phishing  [Reto]
+             - El engaño más común
+             - Mira el dominio real
+        ✔ Examen de la unidad 1: Protege tus cuentas
+
+      Unidad 2: Hábitos seguros
+        4. Malware y copias de seguridad
+             - Tipos de malware
+             - Defensa básica
+        5. Redes y Wi-Fi
+             - HTTPS
+             - Wi-Fi pública y en casa
+        6. Privacidad e ingeniería social
+             - Tu huella digital
+             - Ingeniería social
+        ✔ Examen de la unidad 2: Hábitos seguros
+
+7.2  CIBERSEGURIDAD: PRINCIPIANTE   (Nivel 2)
+      Fundamentos técnicos: conceptos, redes, criptografía y seguridad web para programadores.
+      ------------------------------------------------------------
+
+      Unidad 1: Fundamentos técnicos
+        1. Conceptos clave
+             - La tríada CIA
+             - Amenaza, vulnerabilidad y riesgo
+        2. Redes para seguridad
+             - IP, puertos y protocolos
+             - Firewall y exposición
+        3. Criptografía básica  [Reto]
+             - Cifrado simétrico y asimétrico
+             - Hash
+        ✔ Examen de la unidad 1: Fundamentos técnicos
+
+      Unidad 2: Seguridad web (OWASP)
+        4. Inyección SQL
+             - Cuando el dato se convierte en código
+             - La solución: consultas parametrizadas
+        5. XSS (Cross-Site Scripting)  [Reto]
+             - Scripts inyectados
+             - Defensas
+        6. Autenticación segura
+             - Login bien hecho
+             - Sesiones y cookies
+        ✔ Examen de la unidad 2: Seguridad web (OWASP)
+
+7.3  CIBERSEGURIDAD: PROFESIONAL   (Nivel 3)
+      Hacking ético, OWASP Top 10, DevSecOps, monitorización y respuesta a incidentes.
+      ------------------------------------------------------------
+
+      Unidad 1: Hacking ético
+        1. Ética y marco legal
+             - Sin autorización, es delito
+             - Dónde practicar legalmente
+        2. Metodología de pentesting
+             - Las fases
+             - Herramientas del oficio
+        3. OWASP Top 10 y vulnerabilidades  [Reto]
+             - Los fallos más críticos en webs
+             - CVE y CVSS
+        ✔ Examen de la unidad 1: Hacking ético
+
+      Unidad 2: Defensa y respuesta
+        4. DevSecOps y la nube
+             - Seguridad desde el principio
+             - Nube y Zero Trust
+        5. Monitorización y detección  [Reto]
+             - Ver lo que pasa
+             - Indicadores de ataque
+        6. Respuesta a incidentes y carrera
+             - Cuando pasa lo peor
+             - Carrera en ciberseguridad
+        ✔ Examen de la unidad 2: Defensa y respuesta
+
+======================================================================
+Generado automáticamente desde server/src/content.
