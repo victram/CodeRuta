@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { api } from '../api.js';
 import { useUser } from '../UserContext.jsx';
 import Exercise from '../components/Exercise.jsx';
 import RichText from '../components/RichText.jsx';
 import CodeBlock from '../components/CodeBlock.jsx';
 import Spinner from '../components/Spinner.jsx';
-import { heartTitle } from '../components/TopBar.jsx';
 import { isCorrect, isReady, solutionText } from '../exercises.js';
 import { runCode, runPassed } from '../codeRunner.js';
 import { useTrackTheme } from '../useTrackTheme.js';
@@ -14,11 +13,12 @@ import { useTrackTheme } from '../useTrackTheme.js';
 export default function LessonPlayer({ mode }) {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { user, setUser } = useUser();
 
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
-  const [phase, setPhase] = useState('loading'); // theory | intro | play | saving | result | noHearts
+  const [phase, setPhase] = useState('loading'); // theory | intro | play | saving | result
   const [step, setStep] = useState(0);
   const [queue, setQueue] = useState([]); // índices de ejercicios pendientes (los fallados se repiten al final)
   const [pos, setPos] = useState(0);
@@ -41,15 +41,14 @@ export default function LessonPlayer({ mode }) {
         setData(d);
         setQueue(d.exercises.map((_, i) => i));
         const kind = d.lesson.kind;
-        if (kind === 'lesson' && user.hearts <= 0) setPhase('noHearts');
-        else if (d.lesson.theory?.length) setPhase('theory');
+        if (d.lesson.theory?.length && searchParams.get('practicar') !== '1') setPhase('theory');
         else setPhase(kind === 'exam' ? 'intro' : 'play');
       })
       .catch((e) => alive && setError(e.message));
     return () => {
       alive = false;
     };
-  }, [id, mode, user.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [id, mode, searchParams, user.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useTrackTheme(data?.lesson.trackColor);
 
@@ -82,16 +81,10 @@ export default function LessonPlayer({ mode }) {
       return;
     }
     if (kind !== 'exam') setQueue((q) => [...q, exIdx]);
-    // Los retos de código no quitan vidas: equivocarse programando es parte de aprender.
-    if (kind === 'lesson' && ex.type !== 'code') {
-      setUser((u) => ({ ...u, hearts: Math.max(0, u.hearts - 1) }));
-      api.loseHeart(user.id).then(setUser).catch(() => {});
-    }
   }
 
   function next() {
     if (!checkedRef.current) return;
-    if (kind === 'lesson' && user.hearts <= 0) return setPhase('noHearts');
     if (pos + 1 >= queue.length) return finish();
     checkedRef.current = false;
     setPos((p) => p + 1);
@@ -145,26 +138,6 @@ export default function LessonPlayer({ mode }) {
   }
   if (phase === 'loading' || phase === 'saving') return <Spinner fullscreen />;
 
-  if (phase === 'noHearts') {
-    return (
-      <div className="center-screen">
-        <div className="card narrow-card center">
-          <div className="big-emoji">💔</div>
-          <h2>¡Te quedaste sin vidas!</h2>
-          <p className="muted">Recuperas 1 vida cada 30 minutos ({heartTitle(user).toLowerCase()}). También puedes ganar una vida practicando lo que ya sabes.</p>
-          <div className="stack">
-            <Link to="/practica" className="btn btn-primary btn-lg">
-              🏋️ Practicar (+1 ❤️)
-            </Link>
-            <Link to={exitTo} className="btn btn-outline">
-              Volver
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   const { lesson } = data;
 
   if (phase === 'theory') {
@@ -205,7 +178,7 @@ export default function LessonPlayer({ mode }) {
           <h2>{lesson.title}</h2>
           <p className="muted">
             {data.exercises.length} preguntas de toda la unidad. Necesitas un <strong>{Math.round(lesson.passMark * 100)}%</strong> para aprobar. En los
-            exámenes no pierdes vidas.
+            exámenes puedes revisar cada respuesta al terminar.
           </p>
           <div className="stack">
             <button className="btn btn-primary btn-lg" onClick={() => setPhase('play')}>
@@ -246,12 +219,6 @@ export default function LessonPlayer({ mode }) {
               <span>Aciertos</span>
               <strong>{pct}%</strong>
             </div>
-            {result.heartGained && (
-              <div className="stat stat-heart">
-                <span>Vida</span>
-                <strong>+1 ❤️</strong>
-              </div>
-            )}
           </div>
           <div className="stack">
             {failed ? (
@@ -285,8 +252,6 @@ export default function LessonPlayer({ mode }) {
         onClose={() => navigate(exitTo)}
         progress={done / total}
         color={kind === 'exam' ? 'var(--gold)' : 'var(--success)'}
-        hearts={kind === 'lesson' ? user.hearts : null}
-        heartTitle={heartTitle(user)}
         label={kind === 'exam' ? `${Math.min(pos + 1, total)}/${total}` : null}
       />
       <div className="lesson-body">
@@ -341,7 +306,7 @@ function RunReport({ run }) {
   );
 }
 
-function LessonTop({ onClose, progress, color, hearts, heartTitle: title, label }) {
+function LessonTop({ onClose, progress, color, label }) {
   return (
     <div className="lesson-top">
       <button className="icon-btn" onClick={onClose} aria-label="Salir de la lección">
@@ -351,11 +316,6 @@ function LessonTop({ onClose, progress, color, hearts, heartTitle: title, label 
         <span style={{ width: `${Math.round(progress * 100)}%`, background: color }} />
       </div>
       {label && <span className="lesson-label">{label}</span>}
-      {hearts != null && (
-        <span className="chip chip-heart" title={title}>
-          ❤️ {hearts}
-        </span>
-      )}
     </div>
   );
 }

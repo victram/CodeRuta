@@ -75,8 +75,6 @@ db.exec(`
     name              TEXT NOT NULL,
     avatar            TEXT,
     xp                INTEGER NOT NULL DEFAULT 0,
-    hearts            INTEGER NOT NULL DEFAULT 5,
-    hearts_updated_at INTEGER,
     streak            INTEGER NOT NULL DEFAULT 0,
     best_streak       INTEGER NOT NULL DEFAULT 0,
     last_active       TEXT,
@@ -103,4 +101,18 @@ db.exec(`
   );
 
   CREATE INDEX IF NOT EXISTS idx_xp_log_user_day ON xp_log(user_id, day);
+
+  CREATE TABLE IF NOT EXISTS placement_attempts (
+    id           TEXT PRIMARY KEY,
+    user_id      INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    items        TEXT NOT NULL,
+    started_at   TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    completed_at TEXT
+  );
+
+  CREATE TABLE IF NOT EXISTS placement_results (
+    user_id      INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+    result       TEXT NOT NULL,
+    completed_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+  );
 `);

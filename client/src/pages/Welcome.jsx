@@ -34,7 +34,7 @@ export default function Welcome() {
       <div className="welcome-hero">
         <div className="welcome-logo">🧭</div>
         <h1>CodeRuta</h1>
-        <p>Aprende a programar con lecciones cortas, ejercicios y exámenes. Frontend, backend y, muy pronto, IA y ciberseguridad.</p>
+        <p>Aprende tecnología con lecciones cortas, ejercicios y exámenes: desarrollo, datos, IA, cloud, testing, ciberseguridad y más.</p>
         <ul className="welcome-points">
           <li>📚 Teoría fácil en tarjetas</li>
           <li>🧩 Ejercicios interactivos</li>

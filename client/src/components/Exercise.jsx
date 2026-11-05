@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { shuffle } from '../exercises.js';
 import CodeBlock from './CodeBlock.jsx';
+import KeywordText from './KeywordText.jsx';
 
 const looksLikeCode = (s) => /[<>{}()[\]=;#*"'.:_%]|^[a-z]+[A-Z]/.test(s);
 
@@ -204,7 +205,7 @@ export default function Exercise({ ex, value, onChange, locked }) {
   return (
     <div className="exercise">
       <span className="exercise-type">{typeLabel[ex.type]}</span>
-      <h2 className="prompt">{ex.prompt}</h2>
+      <h2 className="prompt"><KeywordText>{ex.prompt}</KeywordText></h2>
       {ex.code && ex.type !== 'fill' && <CodeBlock code={ex.code} />}
       {Comp ? <Comp ex={ex} value={value} onChange={onChange} locked={locked} /> : <p>Tipo de ejercicio no soportado.</p>}
     </div>

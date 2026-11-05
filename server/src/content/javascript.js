@@ -5,7 +5,7 @@ const retosUnidad1 = lesson(
   [
     card(
       '¡Hora de programar!',
-      'En los **retos** escribes código de verdad y se comprueba con **pruebas automáticas**. Cada prueba llama a tu función y compara el resultado con el esperado.\n\nNo te preocupes si fallas: los retos no quitan vidas y puedes ver una solución.',
+      'En los **retos** escribes código de verdad y se comprueba con **pruebas automáticas**. Cada prueba llama a tu función y compara el resultado con el esperado.\n\nNo te preocupes si fallas: puedes reintentarlo, conservar tu código y ver una solución.',
       `function doble(n) {\n  return n * 2;\n}\n// Prueba: doble(4) → 8 ✓`
     ),
   ],

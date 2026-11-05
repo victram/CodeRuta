@@ -1,12 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useUser } from '../UserContext.jsx';
 
-export function heartTitle(user) {
-  if (user.hearts >= user.maxHearts) return 'Vidas completas';
-  const min = Math.ceil((user.nextHeartIn ?? 0) / 60000);
-  return `Siguiente vida en ${min} min`;
-}
-
 export default function TopBar() {
   const { user } = useUser();
   return (
@@ -20,6 +14,7 @@ export default function TopBar() {
           <NavLink to="/" end>
             Aprender
           </NavLink>
+          <NavLink to="/roadmap">Roadmap</NavLink>
           <NavLink to="/practica">Practicar</NavLink>
           <NavLink to="/perfil">Perfil</NavLink>
         </nav>
@@ -29,9 +24,6 @@ export default function TopBar() {
           </span>
           <span className="chip chip-xp" title="Experiencia total">
             ⭐ {user.xp}
-          </span>
-          <span className="chip chip-heart" title={heartTitle(user)}>
-            ❤️ {user.hearts}
           </span>
           <Link to="/perfil" className="avatar-sm" title={user.name}>
             {user.avatar}

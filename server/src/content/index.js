@@ -41,8 +41,23 @@ import entrevistasTeoria from './entrevistas-teoria.js';
 import ciberNovato from './ciber-novato.js';
 import ciberPrincipiante from './ciber-principiante.js';
 import ciberProfesional from './ciber-profesional.js';
+// Ampliación 2.0
+import { expandExistingCourses } from './expanded-existing.js';
+import kotlinAndroid from './kotlin-android.js';
+import multiplataforma from './multiplataforma.js';
+import testingFundamentos from './testing-fundamentos.js';
+import testingAutomatizacion from './testing-automatizacion.js';
+import cloudLinux from './cloud-linux.js';
+import cloudProveedores from './cloud-proveedores.js';
+import unity from './unity.js';
+import unreal from './unreal.js';
+import nextPostgres from './next-postgres.js';
+import fullstackArquitectura from './fullstack-arquitectura.js';
+import codigoLimpio from './codigo-limpio.js';
+import arquitecturaEquipos from './arquitectura-equipos.js';
+import english from './english.js';
 
-export const tracks = [
+const originalTracks = [
   {
     id: 'frontend',
     title: 'Desarrollo Frontend',
@@ -98,5 +113,67 @@ export const tracks = [
     color: '#e03131',
     description: 'Protege sistemas y datos en tres niveles: novato, principiante y profesional.',
     courses: [ciberNovato, ciberPrincipiante, ciberProfesional],
+  },
+];
+
+expandExistingCourses(originalTracks);
+
+export const tracks = [
+  ...originalTracks,
+  {
+    id: 'movil',
+    title: 'Desarrollo móvil',
+    icon: '📱',
+    color: '#2b8a3e',
+    description: 'Crea aplicaciones Android e iOS con tecnologías modernas.',
+    courses: [kotlinAndroid, multiplataforma],
+  },
+  {
+    id: 'testing',
+    title: 'Testing y QA',
+    icon: '🧪',
+    color: '#f08c00',
+    description: 'Aprende a prevenir, encontrar y corregir errores de software.',
+    courses: [testingFundamentos, testingAutomatizacion],
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud computing',
+    icon: '☁️',
+    color: '#1971c2',
+    description: 'Infraestructura, servicios cloud, Linux y despliegues.',
+    courses: [cloudLinux, cloudProveedores],
+  },
+  {
+    id: 'videojuegos',
+    title: 'Desarrollo de videojuegos',
+    icon: '🎮',
+    color: '#495057',
+    description: 'Lógica, motores, física y diseño de juegos.',
+    courses: [unity, unreal],
+  },
+  {
+    id: 'fullstack',
+    title: 'Desarrollo full stack',
+    icon: '🌐',
+    color: '#5f3dc4',
+    description: 'Integra interfaces, APIs, datos y despliegue en productos completos.',
+    courses: [nextPostgres, fullstackArquitectura],
+  },
+  {
+    id: 'ingenieria-software',
+    title: 'Ingeniería de software',
+    icon: '🏗️',
+    color: '#087f5b',
+    description: 'Diseña, prueba y mantiene código de calidad en equipo.',
+    courses: [codigoLimpio, arquitecturaEquipos],
+  },
+  {
+    id: 'english',
+    title: 'Inglés',
+    icon: '🇬🇧',
+    color: '#4263eb',
+    description: 'Comunicación cotidiana y profesional desde A1 hasta C1.',
+    courses: [english],
   },
 ];

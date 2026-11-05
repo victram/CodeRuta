@@ -1,6 +1,6 @@
 # 🧭 CodeRuta
 
-Aprende a programar paso a paso, como en una app de idiomas: lecciones cortas con teoría fácil, ejercicios interactivos, exámenes por unidad, XP, rachas y vidas.
+Aprende paso a paso con diagnóstico inicial, lecciones cortas, ejercicios interactivos, exámenes, XP, rachas y un roadmap mensual.
 
 Funciona **100 % en local** con una base de datos SQLite.
 
@@ -45,7 +45,7 @@ build/icon.png              Icono de la app
 server/                     Backend: Node + Express + SQLite
   src/index.js              Endpoints de la API
   src/db.js                 Esquema de la base de datos
-  src/game.js               Reglas: XP, niveles, rachas, vidas
+  src/game.js               Reglas: XP, niveles y rachas
   src/seed.js               Carga el contenido en SQLite
   src/content/              📚 TODO el contenido de aprendizaje
     index.js                Mapa de rutas → cursos
@@ -53,14 +53,14 @@ server/                     Backend: Node + Express + SQLite
   data/coderuta.db          Base de datos (se crea sola)
 
 client/                     Frontend: React + Vite
-  src/pages/                Inicio, Curso (camino), Lección, Perfil, Bienvenida
+  src/pages/                Inicio, Roadmap, Curso, Lección, Perfil, Bienvenida
   src/components/           Ejercicios, barra superior, teoría…
   src/exercises.js          Corrección de ejercicios
 ```
 
 ## Ruta de aprendizaje
 
-7 rutas · 26 cursos · 53 unidades · 161 lecciones · 805 ejercicios (49 retos de código) · 53 exámenes.
+14 rutas · 39 cursos · 108 unidades · 321 lecciones · 1.665 ejercicios (49 retos de código) · 108 exámenes.
 
 | Ruta | Cursos |
 |---|---|
@@ -71,6 +71,13 @@ client/                     Frontend: React + Vite
 | 🤖 Inteligencia Artificial | Fundamentos de IA · Machine Learning · Programar con IA · Gana dinero con IA |
 | 💼 Entrevistas técnicas | Problemas de entrevista · Preguntas técnicas y de diseño |
 | 🛡️ Ciberseguridad | Novato · Principiante · Profesional |
+| 📱 Desarrollo móvil | Kotlin y Android · Flutter y React Native |
+| 🧪 Testing y QA | Fundamentos de testing · Automatización de pruebas |
+| ☁️ Cloud computing | Linux y redes para cloud · AWS y Azure esencial |
+| 🎮 Videojuegos | Fundamentos y Unity · Unreal Engine y C++ |
+| 🌐 Full stack | Next.js y PostgreSQL · Arquitectura full stack |
+| 🏗️ Ingeniería de software | Código limpio y patrones · Arquitectura y equipos |
+| 🇬🇧 Inglés | Inglés práctico desde A1 hasta C1 |
 
 | Curso | Temas |
 |---|---|
@@ -100,6 +107,19 @@ client/                     Frontend: React + Vite
 | Ciberseguridad: Novato 💻 | Contraseñas, 2FA, phishing · Malware y copias, Wi-Fi, privacidad e ingeniería social |
 | Ciberseguridad: Principiante 💻 | Tríada CIA, redes, criptografía · Inyección SQL, XSS, autenticación segura |
 | Ciberseguridad: Profesional 💻 | Hacking ético y legalidad, pentesting, OWASP Top 10 · DevSecOps y nube, SIEM, respuesta a incidentes y carrera |
+| Kotlin y Android | Kotlin, Android Studio y ciclo de vida · Compose, ViewModel, Room y proyecto móvil |
+| Flutter y React Native | Desarrollo multiplataforma · APIs, pruebas, accesibilidad y publicación |
+| Fundamentos de testing | Casos de prueba, bugs y regresión · Pruebas de APIs y proyecto QA |
+| Automatización de pruebas | Vitest, integración y Playwright · CI, fiabilidad y pipeline de calidad |
+| Linux y redes para cloud | Consola, administración y redes · Virtualización, almacenamiento y servidor seguro |
+| AWS y Azure esencial | Servicios, redes e identidad · Escalabilidad, costes, observabilidad y despliegue |
+| Fundamentos y Unity | Game loop, C# y escenas · Movimiento, interfaz, sonido y juego 2D |
+| Unreal Engine y C++ | Editor, Blueprints y C++ · Interacción, IA, rendimiento y prototipo 3D |
+| Next.js y PostgreSQL | Renderizado, datos y migraciones · Autenticación, server actions y despliegue |
+| Arquitectura full stack | Capas, seguridad y rendimiento · Observabilidad, CI/CD y proyecto SaaS |
+| Código limpio y patrones | Refactorización, SOLID y patrones · Arquitectura, revisión y deuda técnica |
+| Arquitectura y equipos | Diseño de sistemas y ADR · Gestión ágil, entrega fiable y proyecto final |
+| Inglés A1–C1 | Presentaciones y rutinas · Pasado y planes · Comunicación independiente, profesional y avanzada |
 
 💻 = incluye retos prácticos de código.
 
@@ -107,12 +127,14 @@ Cada **curso** tiene **unidades**; cada unidad tiene **lecciones** (teoría + ~5
 
 ### Reglas del juego
 
+- Antes de acceder al catálogo puedes realizar una **prueba de nivel de 45 actividades**, con diagnóstico y avance automático, o elegir **Comenzar desde 0**.
+- Las preguntas disponen de 15 a 50 segundos según longitud y dificultad; los ejercicios prácticos tienen 45 segundos, 1 minuto y medio o 5 minutos.
 - **XP**: 10 por lección (+5 si es perfecta), 20 por examen (+10 si es perfecto), 5 por repetir o practicar.
-- **Vidas**: 5. Pierdes una por fallo en lecciones (no en exámenes ni práctica). Recuperas 1 cada 30 min, o +1 al completar una práctica.
 - **Racha**: días seguidos con al menos una actividad.
 - **Meta diaria**: 10 / 20 / 30 / 50 XP.
 - Los ejercicios fallados se repiten al final de la lección.
-- Los **retos de código** no quitan vidas; al repetirlos se conserva lo que escribiste.
+- El **roadmap** coloca una etapa pendiente por día y se reorganiza automáticamente con el progreso.
+- En los **retos de código**, al repetir se conserva lo que escribiste.
 
 ## Añadir contenido
 
@@ -147,5 +169,6 @@ Al arrancar se valida el contenido: si un ejercicio está mal formado, el servid
 - [x] Ruta de Inteligencia Artificial (incluye cómo ganar dinero con IA)
 - [x] Retos de código que se ejecutan y corrigen en el navegador
 - [x] Ruta de Ciberseguridad en 3 niveles: novato, principiante y profesional
-- [ ] Unidad 3 de los cursos base (JS asíncrono y DOM, React Router, POO en Python…)
+- [x] Unidad avanzada de cada curso original
+- [x] Rutas de móvil, testing, cloud, videojuegos, full stack e ingeniería de software
 - [ ] Logros/insignias y repaso inteligente de los fallos

@@ -13,9 +13,16 @@ if (!app.requestSingleInstanceLock()) {
   let win = null;
   let origin = null;
 
-  app.on('second-instance', () => {
+  function requestedPath(argv = process.argv) {
+    const value = argv.find((arg) => arg.startsWith('--open-path='))?.slice('--open-path='.length);
+    return value && (/^\/roadmap$/i.test(value) || /^\/(?:leccion|curso)\/[a-z0-9-]+(?:\?practicar=1)?$/i.test(value)) ? value : '/';
+  }
+
+  app.on('second-instance', (_event, argv) => {
     if (!win) return;
     if (win.isMinimized()) win.restore();
+    const path = requestedPath(argv);
+    if (path !== '/' && origin) win.loadURL(`${origin}${path}`);
     win.focus();
   });
 
@@ -50,7 +57,6 @@ if (!app.requestSingleInstanceLock()) {
     });
 
     win.once('ready-to-show', () => win.show());
-
     // Los enlaces externos se abren en el navegador del sistema, no dentro de la app.
     win.webContents.setWindowOpenHandler(({ url }) => {
       shell.openExternal(url);
@@ -66,7 +72,7 @@ if (!app.requestSingleInstanceLock()) {
     win.on('closed', () => {
       win = null;
     });
-    win.loadURL(origin);
+    win.loadURL(`${origin}${requestedPath()}`);
   }
 
   app.whenReady().then(async () => {

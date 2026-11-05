@@ -1,6 +1,8 @@
-﻿CODERUTA - TEMARIO COMPLETO
+CODERUTA - TEMARIO COMPLETO
 ======================================================================
-7 rutas · 26 cursos · 161 lecciones · 805 ejercicios (49 retos de código) · 53 exámenes
+7 rutas originales · 26 cursos originales · 161 lecciones originales · 805 ejercicios originales · 53 exámenes originales
+AMPLIACIÓN PROPUESTA: 13 rutas, 38 cursos y 311 lecciones (estimación de estructura; los ejercicios nuevos están por crear).
+Todas las líneas con NUEVO - son contenido propuesto. El texto sin esta marca procede del temario original.
 
 Cada lección tiene teoría (los subapartados) y unos 5 ejercicios.
 Cada unidad termina con un examen (se aprueba con un 80 %).
@@ -21,6 +23,8 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
              - HTML es el esqueleto de la web
              - Anatomía de una etiqueta
              - Estructura de un documento
+             NUEVO - DOM: qué es y cómo se relaciona con HTML
+             NUEVO - Inspeccionar el documento con DevTools
         2. Títulos, párrafos y enlaces
              - Títulos y párrafos
              - Enlaces y atributos
@@ -33,13 +37,27 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
         4. Formularios
              - Pedir datos al usuario
              - label + input
+             NUEVO - Atributos name, action y method
         5. Tipos de campo y validación
              - Tipos de input
              - Validación sin JavaScript
         6. HTML semántico
              - Etiquetas con significado
              - section, article y div
+             NUEVO - Accesibilidad: landmarks y jerarquía de encabezados
         ✔ Examen de la unidad 2: Formularios y HTML semántico
+
+      NUEVO - Unidad 3: Accesibilidad y herramientas del navegador
+        NUEVO - 7. HTML accesible
+             NUEVO - Texto alternativo, labels y navegación por teclado
+             NUEVO - ARIA: cuándo usarlo y cuándo evitarlo
+        NUEVO - 8. Multimedia y metadatos
+             NUEVO - Audio y vídeo
+             NUEVO - Metadatos, favicon y SEO básico
+        NUEVO - 9. DevTools y proyecto HTML
+             NUEVO - Inspeccionar y depurar elementos
+             NUEVO - [Proyecto] Página de presentación accesible
+        NUEVO - ✔ Examen de unidad 3: Accesibilidad y herramientas del navegador
 
 1.2  CSS   (Desde cero)
       Dale estilo a la web: colores, textos, tamaños y espacios.
@@ -49,12 +67,14 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
         1. Qué es CSS y los selectores
              - CSS es la ropa de la web
              - Tipos de selectores
+             NUEVO - Especificidad, cascada y herencia
         2. Colores y texto
              - Colores
              - Texto
         3. El modelo de caja
              - Todo es una caja
              - Ancho y alto
+             NUEVO - box-sizing: border-box
         ✔ Examen de la unidad 1: Dale estilo a tu página
 
       Unidad 2: Maquetación
@@ -68,7 +88,20 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
              - Una web, todas las pantallas
              - Media queries
              - Unidades flexibles
+             NUEVO - Mobile first y puntos de ruptura
         ✔ Examen de la unidad 2: Maquetación
+
+      NUEVO - Unidad 3: CSS moderno y proyectos
+        NUEVO - 7. Animaciones y transiciones
+             NUEVO - transition, transform y keyframes
+             NUEVO - Preferencias de movimiento reducido
+        NUEVO - 8. Variables y CSS escalable
+             NUEVO - Custom properties y temas
+             NUEVO - Organización y reutilización de estilos
+        NUEVO - 9. Proyecto responsive
+             NUEVO - Cabecera, tarjetas y formulario
+             NUEVO - [Proyecto] Landing adaptable a móvil y escritorio
+        NUEVO - ✔ Examen de unidad 3: CSS moderno y proyectos
 
 1.3  JAVASCRIPT   (Desde cero)
       El lenguaje que da vida a la web. También se usa en el servidor con Node.js.
@@ -79,6 +112,7 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
              - JavaScript da vida a la web
              - Variables
              - Tipos de datos
+             NUEVO - let, const y alcance de bloque
         2. Operadores y condicionales
              - Operadores
              - if / else
@@ -94,15 +128,30 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
         5. Funciones
              - Bloques reutilizables
              - Funciones flecha
+             NUEVO - Scope, closures y callbacks
         6. Arrays
              - Listas de valores
              - map y filter
+             NUEVO - reduce, find, some y every
         7. Objetos
              - Datos con nombre
              - Arrays de objetos
+             NUEVO - Desestructuración y spread/rest
         8. Retos prácticos: datos  [Reto]
              - Funciones, arrays y objetos en acción
         ✔ Examen de la unidad 2: Funciones, arrays y objetos
+
+      NUEVO - Unidad 3: El navegador y JavaScript asíncrono
+        NUEVO - 9. DOM y eventos
+             NUEVO - querySelector y modificación de elementos
+             NUEVO - addEventListener, bubbling y delegación
+        NUEVO - 10. Promesas y async/await
+             NUEVO - Promesas y tratamiento de errores
+             NUEVO - fetch y JSON
+        NUEVO - 11. Almacenamiento y proyecto
+             NUEVO - localStorage y sessionStorage
+             NUEVO - [Proyecto] Lista de tareas con filtros y persistencia
+        NUEVO - ✔ Examen de unidad 3: El navegador y JavaScript asíncrono
 
 1.4  TYPESCRIPT   (Intermedio)
       JavaScript con tipos: detecta errores antes de ejecutar. El estándar en empresas.
@@ -118,6 +167,7 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
         3. Interfaces y type
              - Dar forma a los objetos
              - type vs interface
+             NUEVO - Tipos estructurales y readonly
         ✔ Examen de la unidad 1: Tipos básicos
 
       Unidad 2: TypeScript en la práctica
@@ -130,7 +180,20 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
         6. Narrowing y utility types
              - Estrechar tipos
              - Utility types
+             NUEVO - unknown frente a any; type guards
         ✔ Examen de la unidad 2: TypeScript en la práctica
+
+      NUEVO - Unidad 3: TypeScript aplicado a aplicaciones
+        NUEVO - 7. Tipar APIs y respuestas
+             NUEVO - Tipos para datos externos
+             NUEVO - Validación en tiempo de ejecución
+        NUEVO - 8. TypeScript con React
+             NUEVO - Tipar props, eventos y estado
+             NUEVO - Componentes genéricos básicos
+        NUEVO - 9. Proyecto TypeScript
+             NUEVO - Configuración de tsconfig
+             NUEVO - [Proyecto] Gestor de tareas tipado
+        NUEVO - ✔ Examen de unidad 3: TypeScript aplicado a aplicaciones
 
 1.5  REACT   (Intermedio)
       Construye interfaces con componentes reutilizables. Recomendado tras JavaScript.
@@ -147,6 +210,7 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
         3. Estado con useState
              - La memoria de un componente
              - Eventos
+             NUEVO - Inmutabilidad del estado
         ✔ Examen de la unidad 1: Tus primeros componentes
 
       Unidad 2: Listas, formularios y efectos
@@ -159,7 +223,21 @@ Todo lo que ves en la pantalla: estructura, estilo e interactividad.
         6. useEffect y datos de una API
              - Efectos
              - Cargar datos
+             NUEVO - Dependencias y limpieza de efectos
+             NUEVO - Estados de carga y error
         ✔ Examen de la unidad 2: Listas, formularios y efectos
+
+      NUEVO - Unidad 3: React para aplicaciones reales
+        NUEVO - 7. Navegación con React Router
+             NUEVO - Rutas y parámetros
+             NUEVO - Rutas protegidas: concepto
+        NUEVO - 8. Estado compartido y hooks
+             NUEVO - Context API y useReducer
+             NUEVO - Hooks personalizados
+        NUEVO - 9. Tests y proyecto React
+             NUEVO - Pruebas con Vitest y React Testing Library
+             NUEVO - [Proyecto] Aplicación de notas con API
+        NUEVO - ✔ Examen de la unidad 3: React para aplicaciones reales
 
 ======================================================================
 RUTA 2: DESARROLLO BACKEND
@@ -181,6 +259,7 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         3. Listas y bucles
              - Listas
              - El bucle for
+             NUEVO - Comprensiones de listas
         ✔ Examen de la unidad 1: Python desde cero
 
       Unidad 2: Funciones y estructuras de datos
@@ -193,7 +272,20 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         6. f-strings y errores
              - f-strings
              - try / except
+             NUEVO - Lectura y escritura de archivos
         ✔ Examen de la unidad 2: Funciones y estructuras de datos
+
+      NUEVO - Unidad 3: Python para aplicaciones
+        NUEVO - 7. Módulos y entornos virtuales
+             NUEVO - import, paquetes y pip
+             NUEVO - venv y dependencias
+        NUEVO - 8. Archivos y pruebas
+             NUEVO - CSV, JSON y pathlib
+             NUEVO - pytest y depuración
+        NUEVO - 9. Proyecto Python
+             NUEVO - Argumentos de terminal
+             NUEVO - [Proyecto] Gestor de gastos en archivos JSON
+        NUEVO - ✔ Examen de unidad 3: Python para aplicaciones
 
 2.2  JAVA   (Desde cero)
       El lenguaje de los bancos, Android y las grandes empresas. Base para Spring Boot.
@@ -215,12 +307,14 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         4. Clases y objetos
              - Molde y galletas
              - Encapsulación
+             NUEVO - Constructores y modificadores de acceso
         5. Herencia y polimorfismo
              - extends
              - Polimorfismo
         6. Interfaces y colecciones
              - Interfaces
              - Colecciones
+             NUEVO - Map, Set y List; genéricos
         ✔ Examen de la unidad 2: Programación orientada a objetos
 
       Unidad 3: Java moderno
@@ -230,10 +324,23 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         8. Lambdas y Streams
              - Lambdas
              - Streams
+             NUEVO - Operaciones map, filter y collect
         9. Records y Optional
              - Records
              - Optional
         ✔ Examen de la unidad 3: Java moderno
+
+      NUEVO - Unidad 4: Java profesional
+        NUEVO - 10. Genéricos y colecciones avanzadas
+             NUEVO - Tipos parametrizados
+             NUEVO - Comparable, Comparator y mapas
+        NUEVO - 11. Concurrencia y pruebas
+             NUEVO - Threads y ExecutorService: fundamentos
+             NUEVO - JUnit y Mockito: introducción
+        NUEVO - 12. Proyecto Java
+             NUEVO - Organización por paquetes y capas
+             NUEVO - [Proyecto] Gestor de biblioteca con persistencia
+        NUEVO - ✔ Examen de unidad 4: Java profesional
 
 2.3  SPRING BOOT   (Avanzado)
       El framework de backend más usado con Java. Recomendado tras el curso de Java.
@@ -249,6 +356,7 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         3. Servicios e inyección de dependencias
              - Capas
              - Inyección de dependencias
+             NUEVO - DTO y separación de responsabilidades
         ✔ Examen de la unidad 1: Tu primera API con Spring Boot
 
       Unidad 2: Datos y producción
@@ -261,7 +369,20 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         6. Configuración, seguridad y tests
              - application.properties
              - Seguridad y tests
+             NUEVO - Perfiles de entorno y variables secretas
         ✔ Examen de la unidad 2: Datos y producción
+
+      NUEVO - Unidad 3: Seguridad y calidad en Spring Boot
+        NUEVO - 7. Autenticación con Spring Security
+             NUEVO - Sesiones, roles y permisos
+             NUEVO - JWT: fundamentos y riesgos
+        NUEVO - 8. Tests de API
+             NUEVO - JUnit, Mockito y MockMvc
+             NUEVO - Pruebas de integración con base de datos
+        NUEVO - 9. Despliegue de una API
+             NUEVO - PostgreSQL y migraciones
+             NUEVO - [Proyecto] API REST de reservas con documentación
+        NUEVO - ✔ Examen de unidad 3: Seguridad y calidad en Spring Boot
 
 2.4  NODE.JS Y EXPRESS   (Intermedio)
       JavaScript en el servidor: crea tu propia API. Recomendado tras JavaScript.
@@ -275,6 +396,7 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         2. Servidor con Express
              - Hola, Express
              - req y res
+             NUEVO - Nociones de asincronía en Node
         3. Rutas y JSON
              - Parámetros y cuerpo
              - JSON
@@ -287,10 +409,23 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         5. CRUD con una base de datos
              - CRUD
              - Express + SQLite
+             NUEVO - Consultas parametrizadas
         6. Errores y configuración
              - Responder errores
              - Variables de entorno
         ✔ Examen de la unidad 2: Una API completa
+
+      NUEVO - Unidad 3: APIs Node listas para producción
+        NUEVO - 7. Autenticación y autorización
+             NUEVO - Hash de contraseñas
+             NUEVO - Sesiones, JWT y permisos
+        NUEVO - 8. Testing y validación
+             NUEVO - Validación con esquemas
+             NUEVO - Tests con Vitest o Jest y Supertest
+        NUEVO - 9. Proyecto de API
+             NUEVO - Logging, seguridad y rate limiting
+             NUEVO - [Proyecto] API de inventario con PostgreSQL
+        NUEVO - ✔ Examen de unidad 3: APIs Node listas para producción
 
 2.5  SQL   (Desde cero)
       Habla con las bases de datos: consulta, guarda y relaciona información.
@@ -307,12 +442,14 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         3. JOIN y agregados
              - Resumir datos
              - Relacionar tablas
+             NUEVO - GROUP BY y HAVING
         ✔ Examen de la unidad 1: Consultas básicas
 
       Unidad 2: Diseño de bases de datos
         4. Crear tablas
              - CREATE TABLE
              - Restricciones
+             NUEVO - Claves primarias y foráneas
         5. Relaciones
              - Uno a muchos
              - Muchos a muchos
@@ -320,6 +457,18 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
              - Filtros útiles
              - LIMIT e índices
         ✔ Examen de la unidad 2: Diseño de bases de datos
+
+      NUEVO - Unidad 3: SQL intermedio y rendimiento
+        NUEVO - 7. Consultas avanzadas
+             NUEVO - Subconsultas y CTE
+             NUEVO - Funciones de ventana
+        NUEVO - 8. Transacciones e índices
+             NUEVO - ACID, commit y rollback
+             NUEVO - EXPLAIN e índices
+        NUEVO - 9. Proyecto de datos
+             NUEVO - Modelado y normalización
+             NUEVO - [Proyecto] Base de datos de tienda con informes
+        NUEVO - ✔ Examen de unidad 3: SQL intermedio y rendimiento
 
 2.6  APIS REST Y HTTP   (Intermedio)
       Cómo se comunican el frontend y el backend: HTTP, REST y fetch.
@@ -345,10 +494,24 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         5. Autenticación
              - ¿Quién eres?
              - Tokens en la cabecera
+             NUEVO - Sesiones frente a tokens
         6. CORS y buenas prácticas
              - CORS
              - Buenas prácticas
+             NUEVO - Validación de entrada y límites de peticiones
         ✔ Examen de la unidad 2: APIs profesionales
+
+      NUEVO - Unidad 3: Diseño y prueba de APIs
+        NUEVO - 7. Documentar con OpenAPI
+             NUEVO - Swagger y contratos
+             NUEVO - Ejemplos de peticiones y respuestas
+        NUEVO - 8. Robustez y seguridad
+             NUEVO - Idempotencia y reintentos
+             NUEVO - Rate limiting, validación y errores
+        NUEVO - 9. Integración frontend-backend
+             NUEVO - Pruebas con clientes HTTP
+             NUEVO - [Proyecto] Consumir una API con autenticación
+        NUEVO - ✔ Examen de unidad 3: Diseño y prueba de APIs
 
 2.7  DOCKER Y DEVOPS   (Intermedio)
       Contenedores, CI/CD y despliegue: cómo llevar tu código a producción.
@@ -370,13 +533,27 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         4. CI/CD con GitHub Actions
              - Integración y despliegue continuos
              - Un workflow
+             NUEVO - Ejecución de pruebas antes de desplegar
         5. La nube
              - Dónde desplegar
              - Escalar
         6. Producción: buenas prácticas
              - The Twelve-Factor App
              - Observabilidad
+             NUEVO - Variables de entorno y gestión de secretos
         ✔ Examen de la unidad 2: Despliegue moderno
+
+      NUEVO - Unidad 3: Entrega y observabilidad
+        NUEVO - 7. Linux para despliegues
+             NUEVO - Terminal, procesos y permisos
+             NUEVO - SSH y variables de entorno
+        NUEVO - 8. Monitorización básica
+             NUEVO - Logs, métricas y alertas
+             NUEVO - Health checks
+        NUEVO - 9. Proyecto de despliegue
+             NUEVO - Pipeline de tests y publicación
+             NUEVO - [Proyecto] Desplegar una API con Docker Compose
+        NUEVO - ✔ Examen de unidad 3: Entrega y observabilidad
 
 2.8  GIT Y GITHUB   (Desde cero)
       Guarda el historial de tu código y trabaja en equipo.
@@ -389,6 +566,7 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         2. Ramas
              - Líneas de trabajo paralelas
              - Conflictos
+             NUEVO - Merge frente a rebase
         3. Trabajar con GitHub
              - Repositorios remotos
              - .gitignore y pull requests
@@ -404,7 +582,20 @@ Servidores, bases de datos, APIs, Java y Spring Boot, contenedores y control de 
         6. Trabajo en equipo
              - El flujo con pull requests
              - git stash
+             NUEVO - Revisiones de código
         ✔ Examen de la unidad 2: Git en el día a día
+
+      NUEVO - Unidad 3: Colaboración profesional
+        NUEVO - 7. Estrategias de branching
+             NUEVO - Feature branches y trunk-based development
+             NUEVO - Resolver conflictos reales
+        NUEVO - 8. Revisión y automatización
+             NUEVO - Code review y protección de ramas
+             NUEVO - GitHub Actions para comprobaciones
+        NUEVO - 9. Proyecto colaborativo
+             NUEVO - Issues y pull requests
+             NUEVO - [Proyecto] Contribución a un repositorio compartido
+        NUEVO - ✔ Examen de la unidad 3: Colaboración profesional
 
 ======================================================================
 RUTA 3: CIENCIAS DE LA COMPUTACIÓN
@@ -419,6 +610,7 @@ Estructuras de datos y algoritmos: la base para programar bien y aprobar entrevi
         1. Arrays y strings  [Reto]
              - Memoria contigua
              - Strings
+             NUEVO - Coste de acceso, inserción y eliminación
         2. Pilas y colas  [Reto]
              - Pila (stack): LIFO
              - Cola (queue): FIFO
@@ -437,7 +629,20 @@ Estructuras de datos y algoritmos: la base para programar bien y aprobar entrevi
         6. Grafos y heaps  [Reto]
              - Grafos
              - Heap (montículo)
+             NUEVO - BFS y DFS
         ✔ Examen de la unidad 2: Estructuras avanzadas
+
+      NUEVO - Unidad 3: Aplicaciones y problemas
+        NUEVO - 7. Recorridos de árboles y grafos
+             NUEVO - DFS y BFS
+             NUEVO - Búsqueda por niveles
+        NUEVO - 8. Estructuras según el problema
+             NUEVO - Trade-offs de memoria y tiempo
+             NUEVO - Elegir mapas, heaps y colas
+        NUEVO - 9. Laboratorio de estructuras
+             NUEVO - Implementar estructuras sin librerías
+             NUEVO - [Proyecto] Visualizador de recorridos
+        NUEVO - ✔ Examen de unidad 3: Aplicaciones y problemas
 
 3.2  ALGORITMOS   (Intermedio)
       Big O, búsqueda, ordenación, recursión y programación dinámica. Con retos en JavaScript.
@@ -447,6 +652,7 @@ Estructuras de datos y algoritmos: la base para programar bien y aprobar entrevi
         1. Complejidad: Big O
              - ¿Cuánto tarda si hay más datos?
              - Las más comunes
+             NUEVO - Complejidad espacial
         2. Búsqueda  [Reto]
              - Búsqueda lineal
              - Búsqueda binaria
@@ -465,7 +671,20 @@ Estructuras de datos y algoritmos: la base para programar bien y aprobar entrevi
         6. Programación dinámica  [Reto]
              - No repitas trabajo
              - Memoización y tabulación
+             NUEVO - Elegir estado y transición
         ✔ Examen de la unidad 2: Técnicas
+
+      NUEVO - Unidad 3: Técnicas avanzadas
+        NUEVO - 7. Backtracking
+             NUEVO - Exploración de decisiones
+             NUEVO - Poda de soluciones
+        NUEVO - 8. Greedy y grafos
+             NUEVO - Cuándo funciona una estrategia voraz
+             NUEVO - Caminos mínimos: introducción
+        NUEVO - 9. Entrenamiento de algoritmos
+             NUEVO - Casos límite y pruebas automatizadas
+             NUEVO - [Proyecto] Resolver y explicar una batería de problemas
+        NUEVO - ✔ Examen de la unidad 3: Técnicas avanzadas
 
 ======================================================================
 RUTA 4: ANÁLISIS DE DATOS
@@ -483,6 +702,7 @@ Convierte datos en decisiones con Python, pandas, estadística y visualización.
         2. DataFrames
              - Una tabla en Python
              - Columnas
+             NUEVO - Importación de CSV y Excel
         3. Filtrar y ordenar
              - Filtrar filas
              - Ordenar y seleccionar
@@ -492,6 +712,7 @@ Convierte datos en decisiones con Python, pandas, estadística y visualización.
         4. Limpieza de datos
              - Datos sucios
              - Tipos y textos
+             NUEVO - Valores nulos y duplicados
         5. Agrupar y resumir
              - groupby
              - Funciones de agregado
@@ -499,6 +720,18 @@ Convierte datos en decisiones con Python, pandas, estadística y visualización.
              - merge
              - Tablas dinámicas
         ✔ Examen de la unidad 2: Transformar datos
+
+      NUEVO - Unidad 3: Datos reales y automatización
+        NUEVO - 7. Obtener y validar datos
+             NUEVO - CSV, Excel, JSON y APIs
+             NUEVO - Esquemas y calidad de datos
+        NUEVO - 8. Fechas y series temporales
+             NUEVO - Datetime y resampling
+             NUEVO - Tendencias y estacionalidad
+        NUEVO - 9. Proyecto de análisis
+             NUEVO - Notebook reproducible
+             NUEVO - [Proyecto] Análisis de ventas con pandas
+        NUEVO - ✔ Examen de unidad 3: Datos reales y automatización
 
 4.2  ESTADÍSTICA Y VISUALIZACIÓN   (Desde cero)
       Entiende los datos con estadística básica y cuéntalos con buenos gráficos.
@@ -514,12 +747,14 @@ Convierte datos en decisiones con Python, pandas, estadística y visualización.
         3. Correlación y causalidad
              - Correlación
              - ¡Correlación no es causalidad!
+             NUEVO - Variables de confusión
         ✔ Examen de la unidad 1: Estadística descriptiva
 
       Unidad 2: Visualizar y comunicar
         4. Elegir el gráfico
              - Cada pregunta, su gráfico
              - Reglas de oro
+             NUEVO - Gráficos engañosos y escalas
         5. Matplotlib y Seaborn
              - Matplotlib
              - Seaborn
@@ -527,6 +762,18 @@ Convierte datos en decisiones con Python, pandas, estadística y visualización.
              - Del dato a la decisión
              - Herramientas de BI
         ✔ Examen de la unidad 2: Visualizar y comunicar
+
+      NUEVO - Unidad 3: Estadística aplicada y BI
+        NUEVO - 7. Probabilidad e inferencia
+             NUEVO - Distribuciones y muestreo
+             NUEVO - Intervalos de confianza
+        NUEVO - 8. Hipótesis y experimentos
+             NUEVO - p-valor y errores tipo I/II
+             NUEVO - Pruebas A/B básicas
+        NUEVO - 9. Informes y dashboards
+             NUEVO - Introducción a Power BI
+             NUEVO - [Proyecto] Panel con conclusiones y límites
+        NUEVO - ✔ Examen de la unidad 3: Estadística aplicada y BI
 
 ======================================================================
 RUTA 5: INTELIGENCIA ARTIFICIAL
@@ -553,13 +800,27 @@ Entiende la IA, entrena modelos, construye apps con IA y aprende a ganar dinero 
         4. ¿Qué es un LLM?
              - Predecir la siguiente palabra
              - Tokens y contexto
+             NUEVO - Transformers y atención: visión conceptual
         5. Limitaciones
              - Alucinaciones
              - Otros límites
+             NUEVO - Sesgos, verificación y datos desactualizados
         6. Ética y uso responsable
              - Privacidad
              - Responsabilidad
         ✔ Examen de la unidad 2: Modelos de lenguaje
+
+      NUEVO - Unidad 3: IA generativa con criterio
+        NUEVO - 7. Arquitecturas actuales
+             NUEVO - Transformers a nivel conceptual
+             NUEVO - Modelos de texto e imagen
+        NUEVO - 8. Evaluar respuestas
+             NUEVO - Exactitud, robustez y sesgos
+             NUEVO - Privacidad y datos sensibles
+        NUEVO - 9. Proyecto de fundamentos
+             NUEVO - Comparar resultados y registrar errores
+             NUEVO - [Proyecto] Ficha crítica de un caso de uso
+        NUEVO - ✔ Examen de unidad 3: IA generativa con criterio
 
 5.2  MACHINE LEARNING   (Intermedio)
       Entrena tus propios modelos: regresión, clasificación, métricas y redes neuronales.
@@ -572,9 +833,11 @@ Entiende la IA, entrena modelos, construye apps con IA y aprende a ganar dinero 
         2. Entrenamiento y test
              - Separar los datos
              - Overfitting y underfitting
+             NUEVO - Conjunto de validación y fuga de datos
         3. Métricas de clasificación  [Reto]
              - Accuracy no basta
              - Precision y recall
+             NUEVO - Matriz de confusión y F1
         ✔ Examen de la unidad 1: Tu primer modelo
 
       Unidad 2: Herramientas y redes neuronales
@@ -588,6 +851,18 @@ Entiende la IA, entrena modelos, construye apps con IA y aprende a ganar dinero 
              - Neuronas artificiales
              - Cómo aprenden
         ✔ Examen de la unidad 2: Herramientas y redes neuronales
+
+      NUEVO - Unidad 3: ML de extremo a extremo
+        NUEVO - 7. Pipelines y validación
+             NUEVO - Cross-validation y pipelines
+             NUEVO - Evitar data leakage
+        NUEVO - 8. Redes neuronales prácticas
+             NUEVO - Tensores y entrenamiento con PyTorch
+             NUEVO - Hiperparámetros
+        NUEVO - 9. Proyecto de ML
+             NUEVO - Métricas y seguimiento de experimentos
+             NUEVO - [Proyecto] Clasificador con informe de evaluación
+        NUEVO - ✔ Examen de unidad 3: ML de extremo a extremo
 
 5.3  PROGRAMAR CON IA   (Intermedio)
       Prompts que funcionan, asistentes de código y apps con APIs de IA, RAG y agentes.
@@ -609,13 +884,28 @@ Entiende la IA, entrena modelos, construye apps con IA y aprende a ganar dinero 
         4. Usar la API de un modelo  [Reto]
              - Mensajes
              - Costes y control
+             NUEVO - Salidas estructuradas y manejo de errores
         5. Embeddings y RAG  [Reto]
              - Embeddings
              - RAG
+             NUEVO - Recuperación, fragmentación y evaluación
         6. Agentes y herramientas  [Reto]
              - De chatbot a agente
              - Diseñar agentes con cabeza
+             NUEVO - Permisos y confirmación de acciones
         ✔ Examen de la unidad 2: Construir apps con IA
+
+      NUEVO - Unidad 3: Aplicaciones IA fiables
+        NUEVO - 7. RAG en producción
+             NUEVO - Vector stores y búsqueda híbrida
+             NUEVO - Evaluación de recuperación y respuestas
+        NUEVO - 8. Seguridad y observabilidad
+             NUEVO - Prompt injection y límites de herramientas
+             NUEVO - Coste, latencia y trazas
+        NUEVO - 9. Proyecto con IA
+             NUEVO - Tests y datasets de evaluación
+             NUEVO - [Proyecto] Asistente documental con fuentes
+        NUEVO - ✔ Examen de unidad 3: Aplicaciones IA fiables
 
 5.4  GANA DINERO CON IA   (Intermedio)
       Modelos de negocio reales con IA: servicios, productos, precios y clientes. Sin humo.
@@ -637,13 +927,27 @@ Entiende la IA, entrena modelos, construye apps con IA y aprende a ganar dinero 
         4. Validar la idea
              - Antes de programar
              - Encontrar clientes
+             NUEVO - Entrevistas con usuarios y MVP
         5. Precios y costes  [Reto]
              - Calcula tus costes
              - Poner precio
+             NUEVO - Margen, costes variables y punto de equilibrio
         6. Legal, ética y reputación
              - Haz las cosas bien
              - Honestidad
         ✔ Examen de la unidad 2: De la idea al cliente
+
+      NUEVO - Unidad 3: Operar un producto de IA
+        NUEVO - 7. Adquisición de clientes
+             NUEVO - Canales, demo y propuesta de valor
+             NUEVO - Medir conversión
+        NUEVO - 8. Operaciones y cumplimiento
+             NUEVO - Protección de datos y contratos
+             NUEVO - Soporte y seguimiento de costes
+        NUEVO - 9. Proyecto de negocio
+             NUEVO - Validación con usuarios reales
+             NUEVO - [Proyecto] MVP, presupuesto y plan comercial
+        NUEVO - ✔ Examen de la unidad 3: Operar un producto de IA
 
 ======================================================================
 RUTA 6: ENTREVISTAS TÉCNICAS
@@ -658,6 +962,7 @@ Problemas de código, teoría, diseño de sistemas y preguntas de comportamiento
         1. Cómo afrontar un problema  [Reto]
              - El método
              - Casos límite
+             NUEVO - Comunicar decisiones durante la resolución
         2. Arrays y hashing  [Reto]
              - Two Sum
              - El truco del hash map
@@ -676,7 +981,20 @@ Problemas de código, teoría, diseño de sistemas y preguntas de comportamiento
         6. Árboles y recursión  [Reto]
              - Profundidad de un árbol
              - Invertir un árbol
+             NUEVO - Casos de prueba y límites
         ✔ Examen de la unidad 2: Problemas intermedios
+
+      NUEVO - Unidad 3: Pruebas técnicas realistas
+        NUEVO - 7. Debugging bajo presión
+             NUEVO - Leer errores y reproducir fallos
+             NUEVO - Escribir tests de regresión
+        NUEVO - 8. Problemas de dificultad progresiva
+             NUEVO - Dos punteros, hash maps y árboles
+             NUEVO - Justificar complejidad temporal y espacial
+        NUEVO - 9. Simulación de entrevista
+             NUEVO - Cronómetro y explicación verbal
+             NUEVO - [Proyecto] Resolver un caso y defender la solución
+        NUEVO - ✔ Examen de unidad 3: Pruebas técnicas realistas
 
 6.2  PREGUNTAS TÉCNICAS Y DE DISEÑO   (Avanzado)
       POO, SOLID, web, bases de datos, diseño de sistemas y preguntas de comportamiento.
@@ -698,13 +1016,27 @@ Problemas de código, teoría, diseño de sistemas y preguntas de comportamiento
         4. Diseño de sistemas
              - Cómo responder
              - Piezas habituales
+             NUEVO - Requisitos funcionales y no funcionales
         5. Preguntas de comportamiento
              - El método STAR
              - Prepara tus historias
         6. CV, portfolio y la oferta
              - Destacar
              - La oferta
+             NUEVO - Cómo explicar decisiones técnicas
         ✔ Examen de la unidad 2: Diseño de sistemas y conducta
+
+      NUEVO - Unidad 3: Entrevista profesional completa
+        NUEVO - 7. Code review y refactorización
+             NUEVO - Detectar problemas de mantenimiento
+             NUEVO - Proponer mejoras con trade-offs
+        NUEVO - 8. Diseño aplicado
+             NUEVO - Diseño de API y datos
+             NUEVO - Escalabilidad básica y seguridad
+        NUEVO - 9. Presentación profesional
+             NUEVO - Portfolio, STAR y preguntas al entrevistador
+             NUEVO - [Proyecto] Simulación completa con rúbrica
+        NUEVO - ✔ Examen de la unidad 3: Entrevista profesional completa
 
 ======================================================================
 RUTA 7: CIBERSEGURIDAD
@@ -719,12 +1051,14 @@ Protege sistemas y datos en tres niveles: novato, principiante y profesional.
         1. Contraseñas seguras  [Reto]
              - Longitud antes que complejidad
              - Un gestor de contraseñas
+             NUEVO - Passkeys y gestores de contraseñas
         2. Verificación en dos pasos
              - Algo que sabes + algo que tienes
              - Mejor y peor
         3. Phishing  [Reto]
              - El engaño más común
              - Mira el dominio real
+             NUEVO - Verificar enlaces y remitentes sin abrirlos
         ✔ Examen de la unidad 1: Protege tus cuentas
 
       Unidad 2: Hábitos seguros
@@ -739,6 +1073,18 @@ Protege sistemas y datos en tres niveles: novato, principiante y profesional.
              - Ingeniería social
         ✔ Examen de la unidad 2: Hábitos seguros
 
+      NUEVO - Unidad 3: Seguridad cotidiana práctica
+        NUEVO - 7. Dispositivos seguros
+             NUEVO - Actualizaciones y permisos
+             NUEVO - Copias de seguridad y recuperación
+        NUEVO - 8. Navegación y cuentas
+             NUEVO - Passkeys y MFA resistentes al phishing
+             NUEVO - Permisos de aplicaciones
+        NUEVO - 9. Proyecto de higiene digital
+             NUEVO - Checklist personal sin recopilar secretos
+             NUEVO - [Proyecto] Plan básico de protección
+        NUEVO - ✔ Examen de unidad 3: Seguridad cotidiana práctica
+
 7.2  CIBERSEGURIDAD: PRINCIPIANTE   (Nivel 2)
       Fundamentos técnicos: conceptos, redes, criptografía y seguridad web para programadores.
       ------------------------------------------------------------
@@ -750,6 +1096,7 @@ Protege sistemas y datos en tres niveles: novato, principiante y profesional.
         2. Redes para seguridad
              - IP, puertos y protocolos
              - Firewall y exposición
+             NUEVO - DNS, TCP/UDP y TLS
         3. Criptografía básica  [Reto]
              - Cifrado simétrico y asimétrico
              - Hash
@@ -765,7 +1112,20 @@ Protege sistemas y datos en tres niveles: novato, principiante y profesional.
         6. Autenticación segura
              - Login bien hecho
              - Sesiones y cookies
+             NUEVO - Contraseñas con hash y sal
         ✔ Examen de la unidad 2: Seguridad web (OWASP)
+
+      NUEVO - Unidad 3: Linux, redes y seguridad API
+        NUEVO - 7. Linux y consola
+             NUEVO - Permisos, usuarios y procesos
+             NUEVO - Logs y comandos de red
+        NUEVO - 8. Seguridad de APIs
+             NUEVO - Autorización por objeto y rate limits
+             NUEVO - Gestión de secretos y validación
+        NUEVO - 9. Laboratorio controlado
+             NUEVO - Entornos locales de práctica
+             NUEVO - [Proyecto] Detectar y corregir fallos en una app vulnerable local
+        NUEVO - ✔ Examen de unidad 3: Linux, redes y seguridad API
 
 7.3  CIBERSEGURIDAD: PROFESIONAL   (Nivel 3)
       Hacking ético, OWASP Top 10, DevSecOps, monitorización y respuesta a incidentes.
@@ -781,6 +1141,7 @@ Protege sistemas y datos en tres niveles: novato, principiante y profesional.
         3. OWASP Top 10 y vulnerabilidades  [Reto]
              - Los fallos más críticos en webs
              - CVE y CVSS
+             NUEVO - OWASP Top 10:2025 y riesgos de control de acceso
         ✔ Examen de la unidad 1: Hacking ético
 
       Unidad 2: Defensa y respuesta
@@ -790,10 +1151,422 @@ Protege sistemas y datos en tres niveles: novato, principiante y profesional.
         5. Monitorización y detección  [Reto]
              - Ver lo que pasa
              - Indicadores de ataque
+             NUEVO - Lectura básica de logs y alertas
         6. Respuesta a incidentes y carrera
              - Cuando pasa lo peor
              - Carrera en ciberseguridad
         ✔ Examen de la unidad 2: Defensa y respuesta
 
+      NUEVO - Unidad 3: Operación defensiva
+        NUEVO - 7. Gestión de vulnerabilidades
+             NUEVO - Inventario, severidad y priorización
+             NUEVO - Escaneo autorizado y verificación
+        NUEVO - 8. Monitorización y respuesta
+             NUEVO - SIEM: fundamentos y correlación
+             NUEVO - Contención, evidencias y postmortem
+        NUEVO - 9. Proyecto de defensa
+             NUEVO - Threat modeling y controles
+             NUEVO - [Proyecto] Informe de auditoría de un laboratorio propio
+        NUEVO - ✔ Examen de la unidad 3: Operación defensiva
+
 ======================================================================
-Generado automáticamente desde server/src/content.
+Versión ampliada a partir del temario original de CodeRuta.
+
+======================================================================
+NUEVO - RUTA 8: DESARROLLO MÓVIL
+NUEVO - Crea aplicaciones Android e iOS con tecnologías modernas.
+======================================================================
+
+8.1  KOTLIN Y ANDROID   (Desde cero)
+      Interfaces, actividades y estado en Android.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Kotlin esencial
+        NUEVO - 1. Variables, funciones y clases
+             NUEVO - Tipos, null safety y colecciones
+             NUEVO - Funciones y data classes
+        NUEVO - 2. Control de flujo y objetos
+             NUEVO - Condicionales, bucles y POO
+             NUEVO - Interfaces y lambdas
+        NUEVO - 3. Primeros pasos Android
+             NUEVO - Android Studio y estructura
+             NUEVO - Emulador y ciclo de vida
+        NUEVO - ✔ Examen de la unidad 1: Kotlin esencial
+
+      NUEVO - Unidad 2: Aplicaciones Android
+        NUEVO - 4. Interfaces con Jetpack Compose
+             NUEVO - Composables y layouts
+             NUEVO - Estado y navegación
+        NUEVO - 5. Datos y arquitectura
+             NUEVO - ViewModel y repositorios
+             NUEVO - Persistencia con Room
+        NUEVO - 6. Proyecto móvil
+             NUEVO - Permisos y pruebas
+             NUEVO - [Proyecto] App Android de hábitos
+        NUEVO - ✔ Examen de la unidad 2: Aplicaciones Android
+
+8.2  FLUTTER Y REACT NATIVE   (Intermedio)
+      Desarrollo multiplataforma y publicación.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Fundamentos multiplataforma
+        NUEVO - 1. Dart y Flutter
+             NUEVO - Widgets y estado
+             NUEVO - Diseño adaptable
+        NUEVO - 2. React Native
+             NUEVO - Componentes nativos y navegación
+             NUEVO - Estado y estilos
+        NUEVO - 3. Elegir una tecnología
+             NUEVO - Rendimiento y ecosistema
+             NUEVO - Ventajas y limitaciones
+        NUEVO - ✔ Examen de la unidad 1: Fundamentos multiplataforma
+
+      NUEVO - Unidad 2: Publicar una app
+        NUEVO - 4. Datos y APIs
+             NUEVO - HTTP, almacenamiento y errores
+             NUEVO - Autenticación
+        NUEVO - 5. Testing y accesibilidad
+             NUEVO - Pruebas y navegación accesible
+             NUEVO - Permisos y privacidad
+        NUEVO - 6. Proyecto multiplataforma
+             NUEVO - Builds y tiendas: conceptos
+             NUEVO - [Proyecto] App de seguimiento personal
+        NUEVO - ✔ Examen de la unidad 2: Publicar una app
+
+
+======================================================================
+NUEVO - RUTA 9: TESTING Y QA
+NUEVO - Aprende a prevenir, encontrar y corregir errores de software.
+======================================================================
+
+9.1  FUNDAMENTOS DE TESTING   (Desde cero)
+      Casos de prueba, informes y calidad.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Bases de calidad
+        NUEVO - 1. Tipos de pruebas
+             NUEVO - Unitarias, integración y end-to-end
+             NUEVO - Pirámide de pruebas
+        NUEVO - 2. Diseño de casos
+             NUEVO - Particiones y valores límite
+             NUEVO - Precondiciones y resultados esperados
+        NUEVO - 3. Gestión de bugs
+             NUEVO - Reproducibilidad y prioridad
+             NUEVO - Informes útiles
+        NUEVO - ✔ Examen de la unidad 1: Bases de calidad
+
+      NUEVO - Unidad 2: QA en equipos
+        NUEVO - 4. Pruebas funcionales
+             NUEVO - Regresión y exploratorias
+             NUEVO - Matrices de casos
+        NUEVO - 5. APIs y herramientas
+             NUEVO - Pruebas de endpoints
+             NUEVO - Colecciones y entornos
+        NUEVO - 6. Proyecto QA
+             NUEVO - Plan y evidencia
+             NUEVO - [Proyecto] Probar una aplicación de tareas
+        NUEVO - ✔ Examen de la unidad 2: QA en equipos
+
+9.2  AUTOMATIZACIÓN DE PRUEBAS   (Intermedio)
+      Vitest, Playwright y CI.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Pruebas automatizadas
+        NUEVO - 1. Unitarias con Vitest
+             NUEVO - Matchers y mocks
+             NUEVO - Cobertura con criterio
+        NUEVO - 2. Integración
+             NUEVO - Componentes, APIs y bases de datos
+             NUEVO - Fixtures
+        NUEVO - 3. Pruebas E2E con Playwright
+             NUEVO - Selectores estables y aserciones
+             NUEVO - Manejo de esperas
+        NUEVO - ✔ Examen de la unidad 1: Pruebas automatizadas
+
+      NUEVO - Unidad 2: Calidad continua
+        NUEVO - 4. Pruebas en CI
+             NUEVO - GitHub Actions
+             NUEVO - Informes de ejecución
+        NUEVO - 5. Pruebas fiables
+             NUEVO - Flaky tests y aislamiento
+             NUEVO - Datos de prueba
+        NUEVO - 6. Proyecto de automatización
+             NUEVO - Suite completa
+             NUEVO - [Proyecto] Pipeline de calidad web
+        NUEVO - ✔ Examen de la unidad 2: Calidad continua
+
+
+======================================================================
+NUEVO - RUTA 10: CLOUD COMPUTING
+NUEVO - Infraestructura, servicios cloud, Linux y despliegues.
+======================================================================
+
+10.1  LINUX Y REDES PARA CLOUD   (Desde cero)
+      Fundamentos de sistemas y conectividad.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Sistema operativo
+        NUEVO - 1. Consola Linux
+             NUEVO - Comandos, rutas y permisos
+             NUEVO - Procesos y servicios
+        NUEVO - 2. Administración básica
+             NUEVO - Usuarios, paquetes y logs
+             NUEVO - SSH y seguridad
+        NUEVO - 3. Redes
+             NUEVO - DNS, TCP/IP y HTTP
+             NUEVO - Puertos y firewalls
+        NUEVO - ✔ Examen de la unidad 1: Sistema operativo
+
+      NUEVO - Unidad 2: Infraestructura
+        NUEVO - 4. Virtualización y contenedores
+             NUEVO - Máquinas virtuales
+             NUEVO - Contenedores
+        NUEVO - 5. Almacenamiento y copias
+             NUEVO - Bloques, objetos y volúmenes
+             NUEVO - Backup y recuperación
+        NUEVO - 6. Proyecto servidor
+             NUEVO - Monitorización y hardening básico
+             NUEVO - [Proyecto] Servidor Linux de laboratorio
+        NUEVO - ✔ Examen de la unidad 2: Infraestructura
+
+10.2  AWS Y AZURE ESENCIAL   (Intermedio)
+      Servicios, arquitectura y costes.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Primeros pasos en cloud
+        NUEVO - 1. Modelos de nube
+             NUEVO - IaaS, PaaS y SaaS
+             NUEVO - Regiones y zonas
+        NUEVO - 2. Computación y almacenamiento
+             NUEVO - Máquinas virtuales y objetos
+             NUEVO - Bases de datos gestionadas
+        NUEVO - 3. Redes e identidad
+             NUEVO - VPC/VNet y reglas
+             NUEVO - IAM y mínimo privilegio
+        NUEVO - ✔ Examen de la unidad 1: Primeros pasos en cloud
+
+      NUEVO - Unidad 2: Desplegar y operar
+        NUEVO - 4. Escalabilidad y disponibilidad
+             NUEVO - Balanceo y autoescalado
+             NUEVO - Recuperación ante fallos
+        NUEVO - 5. Costes y observabilidad
+             NUEVO - Presupuestos y etiquetas
+             NUEVO - Logs y métricas
+        NUEVO - 6. Proyecto cloud
+             NUEVO - Infraestructura básica
+             NUEVO - [Proyecto] Desplegar app con alertas y presupuesto
+        NUEVO - ✔ Examen de la unidad 2: Desplegar y operar
+
+
+======================================================================
+NUEVO - RUTA 11: DESARROLLO DE VIDEOJUEGOS
+NUEVO - Lógica, motores, física y diseño de juegos.
+======================================================================
+
+11.1  FUNDAMENTOS Y UNITY   (Desde cero)
+      Desarrolla prototipos interactivos con C#.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Bases de juegos
+        NUEVO - 1. Game loop y coordenadas
+             NUEVO - Update y tiempo delta
+             NUEVO - Vectores y transformaciones
+        NUEVO - 2. Introducción a C#
+             NUEVO - Variables, clases y eventos
+             NUEVO - Componentes
+        NUEVO - 3. Escenas y prefabs
+             NUEVO - Objetos, colisiones y físicas
+             NUEVO - Prefab y organización
+        NUEVO - ✔ Examen de la unidad 1: Bases de juegos
+
+      NUEVO - Unidad 2: Juego completo
+        NUEVO - 4. Movimiento y cámara
+             NUEVO - Controles y animación
+             NUEVO - Cámara
+        NUEVO - 5. Interfaz y sonido
+             NUEVO - HUD y menús
+             NUEVO - Audio y feedback
+        NUEVO - 6. Proyecto Unity
+             NUEVO - Pruebas y builds
+             NUEVO - [Proyecto] Juego 2D con niveles
+        NUEVO - ✔ Examen de la unidad 2: Juego completo
+
+11.2  UNREAL ENGINE Y C++   (Intermedio)
+      Blueprints, gameplay y optimización.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Introducción a Unreal
+        NUEVO - 1. Editor y actores
+             NUEVO - Niveles, componentes y assets
+             NUEVO - Sistema de eventos
+        NUEVO - 2. Blueprints
+             NUEVO - Variables, funciones y comunicación
+             NUEVO - Inputs y gameplay
+        NUEVO - 3. Fundamentos de C++
+             NUEVO - Clases, punteros inteligentes y referencias
+             NUEVO - Clases de Unreal
+        NUEVO - ✔ Examen de la unidad 1: Introducción a Unreal
+
+      NUEVO - Unidad 2: Prototipo 3D
+        NUEVO - 4. Interacción y física
+             NUEVO - Detección de colisiones
+             NUEVO - Interfaces de interacción
+        NUEVO - 5. IA y rendimiento
+             NUEVO - Behavior Trees: introducción
+             NUEVO - Profiling y LOD
+        NUEVO - 6. Proyecto Unreal
+             NUEVO - Empaquetado y pruebas
+             NUEVO - [Proyecto] Prototipo jugable en 3D
+        NUEVO - ✔ Examen de la unidad 2: Prototipo 3D
+
+
+======================================================================
+NUEVO - RUTA 12: DESARROLLO FULL STACK
+NUEVO - Integra interfaces, APIs, datos y despliegue en productos completos.
+======================================================================
+
+12.1  NEXT.JS Y POSTGRESQL   (Intermedio)
+      Aplicaciones web con frontend y backend.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Full stack moderno
+        NUEVO - 1. Next.js fundamental
+             NUEVO - Enrutado y renderizado
+             NUEVO - Server y Client Components
+        NUEVO - 2. PostgreSQL
+             NUEVO - Esquemas y consultas
+             NUEVO - Migraciones
+        NUEVO - 3. Acceso a datos
+             NUEVO - ORM: conceptos
+             NUEVO - Validación de entradas
+        NUEVO - ✔ Examen de la unidad 1: Full stack moderno
+
+      NUEVO - Unidad 2: Producto conectado
+        NUEVO - 4. Autenticación
+             NUEVO - Sesiones y roles
+             NUEVO - Cookies seguras
+        NUEVO - 5. Server actions y APIs
+             NUEVO - Mutaciones y validación
+             NUEVO - Errores y estados de carga
+        NUEVO - 6. Proyecto full stack
+             NUEVO - Testing y despliegue
+             NUEVO - [Proyecto] Aplicación de reservas
+        NUEVO - ✔ Examen de la unidad 2: Producto conectado
+
+12.2  ARQUITECTURA FULL STACK   (Avanzado)
+      Seguridad, rendimiento y mantenimiento.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Diseño profesional
+        NUEVO - 1. Arquitectura por capas
+             NUEVO - Separar UI, dominio y datos
+             NUEVO - Contratos y DTO
+        NUEVO - 2. Seguridad y datos
+             NUEVO - Autorización y secretos
+             NUEVO - Transacciones
+        NUEVO - 3. Rendimiento
+             NUEVO - Caché y paginación
+             NUEVO - Consultas eficientes
+        NUEVO - ✔ Examen de la unidad 1: Diseño profesional
+
+      NUEVO - Unidad 2: Producción
+        NUEVO - 4. Observabilidad
+             NUEVO - Logging y métricas
+             NUEVO - Seguimiento de errores
+        NUEVO - 5. Entrega continua
+             NUEVO - CI/CD y migraciones
+             NUEVO - Estrategias de despliegue
+        NUEVO - 6. Proyecto de portfolio
+             NUEVO - Documentación y pruebas
+             NUEVO - [Proyecto] SaaS pequeño desplegado
+        NUEVO - ✔ Examen de la unidad 2: Producción
+
+
+======================================================================
+NUEVO - RUTA 13: INGENIERÍA DE SOFTWARE
+NUEVO - Diseña, prueba y mantiene código de calidad en equipo.
+======================================================================
+
+13.1  CÓDIGO LIMPIO Y PATRONES   (Intermedio)
+      Principios de diseño y mantenibilidad.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Diseñar bien
+        NUEVO - 1. Legibilidad y refactorización
+             NUEVO - Nombres y funciones
+             NUEVO - Code smells
+        NUEVO - 2. SOLID
+             NUEVO - Responsabilidades y dependencias
+             NUEVO - Ejemplos prácticos
+        NUEVO - 3. Patrones de diseño
+             NUEVO - Factory, Strategy y Observer
+             NUEVO - Cuándo no aplicar patrones
+        NUEVO - ✔ Examen de la unidad 1: Diseñar bien
+
+      NUEVO - Unidad 2: Diseño aplicado
+        NUEVO - 4. Arquitectura en capas
+             NUEVO - Dependencias y módulos
+             NUEVO - Casos de uso
+        NUEVO - 5. Revisión de código
+             NUEVO - Feedback constructivo
+             NUEVO - Deuda técnica
+        NUEVO - 6. Proyecto mantenible
+             NUEVO - Refactorización con tests
+             NUEVO - [Proyecto] Mejorar una aplicación existente
+        NUEVO - ✔ Examen de la unidad 2: Diseño aplicado
+
+13.2  ARQUITECTURA Y EQUIPOS   (Avanzado)
+      Decisiones técnicas y colaboración.
+      ------------------------------------------------------------
+
+      NUEVO - Unidad 1: Arquitecturas de software
+        NUEVO - 1. Monolito y microservicios
+             NUEVO - Ventajas y trade-offs
+             NUEVO - Límites de dominio
+        NUEVO - 2. Diseño de sistemas
+             NUEVO - Disponibilidad y escalabilidad
+             NUEVO - Colas y caché: introducción
+        NUEVO - 3. Documentación técnica
+             NUEVO - Diagramas y ADR
+             NUEVO - Contratos de API
+        NUEVO - ✔ Examen de la unidad 1: Arquitecturas de software
+
+      NUEVO - Unidad 2: Trabajo profesional
+        NUEVO - 4. Gestión ágil
+             NUEVO - Kanban y Scrum
+             NUEVO - Estimación y planificación
+        NUEVO - 5. Entrega fiable
+             NUEVO - Releases, rollbacks y observabilidad
+             NUEVO - Incidentes y postmortems
+        NUEVO - 6. Proyecto final
+             NUEVO - Diseño, documentación y pruebas
+             NUEVO - [Proyecto] Solución de extremo a extremo
+        NUEVO - ✔ Examen de la unidad 2: Trabajo profesional
+
+
+======================================================================
+NUEVO - RUTA 14: INGLÉS
+NUEVO - Comunicación cotidiana y profesional desde A1 hasta C1.
+======================================================================
+
+14.1  INGLÉS A1-C1   (A1 a C1)
+      NUEVO - Unidad 1: A1 · Fundamentos
+        NUEVO - Presentaciones y vocabulario esencial
+        NUEVO - Rutinas y presente simple
+      NUEVO - Unidad 2: A2 · Situaciones cotidianas
+        NUEVO - Pasado simple
+        NUEVO - Planes y comparaciones
+      NUEVO - Unidad 3: B1 · Comunicación independiente
+        NUEVO - Narración y tiempos verbales
+        NUEVO - Condicionales y verbos modales
+      NUEVO - Unidad 4: B2 · Inglés profesional
+        NUEVO - Comunicación profesional
+        NUEVO - Gramática compleja y precisión
+      NUEVO - Unidad 5: C1 · Dominio avanzado
+        NUEVO - Matiz, registro y lenguaje natural
+        NUEVO - Argumentación y comprensión avanzada
+
+NUEVO - DIAGNÓSTICO INICIAL
+      45 preguntas y ejercicios repartidos en tres dificultades.
+      Preguntas: entre 15 y 50 segundos. Ejercicios: 45 segundos, 1 minuto y medio o 5 minutos.
+      El resultado determina el nivel por ruta, recomienda repasos y adelanta contenido dominado.

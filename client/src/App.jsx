@@ -8,6 +8,8 @@ import Home from './pages/Home.jsx';
 import Course from './pages/Course.jsx';
 import LessonPlayer from './pages/LessonPlayer.jsx';
 import Profile from './pages/Profile.jsx';
+import Roadmap from './pages/Roadmap.jsx';
+import PlacementTest from './pages/PlacementTest.jsx';
 
 function Layout() {
   const { refresh } = useUser();
@@ -31,14 +33,24 @@ export default function App() {
   const { userId, user } = useUser();
   if (!userId) return <Welcome />;
   if (!user) return <Spinner fullscreen />;
+  if (!user.placementCompleted) {
+    return (
+      <Routes>
+        <Route path="/nivel" element={<PlacementTest />} />
+        <Route path="*" element={<Navigate to="/nivel" replace />} />
+      </Routes>
+    );
+  }
 
   return (
     <Routes>
+      <Route path="/nivel" element={<PlacementTest />} />
       <Route path="/leccion/:id" element={<LessonPlayer mode="lesson" />} />
       <Route path="/practica" element={<LessonPlayer mode="practice" />} />
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/curso/:id" element={<Course />} />
+        <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/perfil" element={<Profile />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

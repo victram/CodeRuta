@@ -1,8 +1,6 @@
-// Reglas del juego: vidas, rachas, niveles y XP.
+// Reglas del juego: rachas, niveles y XP.
 import { db } from './db.js';
 
-export const MAX_HEARTS = 5;
-export const HEART_REGEN_MS = 30 * 60 * 1000; // 1 vida cada 30 minutos
 export const EXAM_PASS = 0.8; // 80 % para aprobar un examen
 export const EXAM_SIZE = 10; // preguntas por examen
 
@@ -26,28 +24,18 @@ export function levelInfo(xp) {
 
 const selectUser = db.prepare('SELECT * FROM users WHERE id = ?');
 
-// Aplica la regeneración de vidas y corta la racha si se saltó un día.
+// Corta la racha si se saltó un día.
 function sync(row) {
-  let { hearts, streak } = row;
-  let at = row.hearts_updated_at ?? Date.now();
+  let { streak } = row;
   let changed = false;
-
-  if (hearts < MAX_HEARTS) {
-    const gained = Math.floor((Date.now() - at) / HEART_REGEN_MS);
-    if (gained > 0) {
-      hearts = Math.min(MAX_HEARTS, hearts + gained);
-      at = hearts >= MAX_HEARTS ? Date.now() : at + gained * HEART_REGEN_MS;
-      changed = true;
-    }
-  }
   if (streak > 0 && row.last_active !== dayKey() && row.last_active !== daysAgo(1)) {
     streak = 0;
     changed = true;
   }
   if (changed) {
-    db.prepare('UPDATE users SET hearts = ?, hearts_updated_at = ?, streak = ? WHERE id = ?').run(hearts, at, streak, row.id);
+    db.prepare('UPDATE users SET streak = ? WHERE id = ?').run(streak, row.id);
   }
-  return { ...row, hearts, hearts_updated_at: at, streak };
+  return { ...row, streak };
 }
 
 function toPublic(u) {
@@ -60,14 +48,12 @@ function toPublic(u) {
     avatar: u.avatar,
     xp: u.xp,
     ...levelInfo(u.xp),
-    hearts: u.hearts,
-    maxHearts: MAX_HEARTS,
-    nextHeartIn: u.hearts < MAX_HEARTS ? Math.max(0, u.hearts_updated_at + HEART_REGEN_MS - Date.now()) : null,
     streak: u.streak,
     bestStreak: u.best_streak,
     dailyGoal: u.daily_goal,
     todayXp,
     playedToday: u.last_active === dayKey(),
+    placementCompleted: !!db.prepare('SELECT 1 FROM placement_results WHERE user_id = ?').get(u.id),
   };
 }
 
@@ -88,22 +74,5 @@ export function addXp(userId, amount, source) {
   if (amount > 0) {
     db.prepare('INSERT INTO xp_log (user_id, day, amount, source) VALUES (?, ?, ?, ?)').run(userId, today, amount, source);
   }
-  return getUser(userId);
-}
-
-export function loseHeart(userId) {
-  const row = selectUser.get(userId);
-  if (!row) return null;
-  const u = sync(row);
-  if (u.hearts > 0) {
-    const at = u.hearts >= MAX_HEARTS ? Date.now() : u.hearts_updated_at;
-    db.prepare('UPDATE users SET hearts = ?, hearts_updated_at = ? WHERE id = ?').run(u.hearts - 1, at, userId);
-  }
-  return getUser(userId);
-}
-
-export function gainHeart(userId) {
-  const u = sync(selectUser.get(userId));
-  if (u.hearts < MAX_HEARTS) db.prepare('UPDATE users SET hearts = ? WHERE id = ?').run(u.hearts + 1, userId);
   return getUser(userId);
 }
